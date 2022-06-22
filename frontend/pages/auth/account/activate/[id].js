@@ -16,8 +16,8 @@ const ActivateAccount = ({router}) => {
     });
     const {name, token, error, loading, success, showButton} = values
     useEffect(() => {
-
-        if (router.query.id) {
+        let token = router.query.id
+        if (token) {
             const {name} = jwt.decode(token)
             setValues({...values, name, token})
         }
