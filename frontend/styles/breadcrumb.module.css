@@ -15,7 +15,8 @@
 .breadcrumbs:before {
     z-index: 1;
     content: "";
-    background-color: rgba(0, 0, 0, 0.4);
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+   background-color:  rgba(16,61,103,0.73);
     position: absolute;
     inset: 0;
 }

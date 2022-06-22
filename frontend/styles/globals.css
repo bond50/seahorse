@@ -213,12 +213,8 @@ section {
 }
 
 .header.sticked {
-    background: var(--color-secondary);
+     background-color: rgba(16, 61, 103, 0.85);;
     padding: 6px 0;
-}
-
-.header.sticker {
-    background: rgba(27, 47, 69, 0.9);
 }
 
 .header.transparent {
@@ -401,7 +397,7 @@ section {
 
 .hero {
     width: 100%;
-    min-height:100vh;
+    min-height:90vh;
     background: url("/img/hero/hero.jpg") top center;
     background-size: cover;
     position: relative;
@@ -414,7 +410,7 @@ section {
         position: absolute;
         content: "";
         width: 100%;
-        background: rgba(0, 0, 0, 0.1);
+        background-color: rgba(16, 61, 103, 0.89);
         /*background: linear-gradient(var(--color-white), var(--color-secondary-dark), rgba(0, 0, 0, 8));*/
         top: 0;
         bottom: 0;
