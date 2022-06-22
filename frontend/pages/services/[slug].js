@@ -50,8 +50,8 @@ const Slug = ({service, query}) => {
         <> {head()}
             <Layout
                 breadcrumb
-                breadcrumbHeader2={`About`}
-                breadImg={`https://cdn.pixabay.com/photo/2015/09/08/01/21/dam-929406_960_720.jpg`}
+                breadcrumbHeader2={service.title}
+                 breadImg={`/img/service/windmill.jpg`}
             >
                 <section className={classes.Detail}>
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
