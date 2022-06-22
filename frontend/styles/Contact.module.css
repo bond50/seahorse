@@ -1,0 +1,88 @@
+.Contact {
+    background: url("https://cdn.pixabay.com/photo/2012/05/07/04/41/world-map-47959_960_720.png") left top no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+@media (max-width: 640px) {
+    .Contact {
+        background-position: center 50px;
+    }
+}
+
+.Contact:before {
+    content: "";
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.infoItem + .infoItem {
+    margin-top: 40px;
+}
+
+.infoItem i {
+    font-size: 20px;
+    background: var(--color-primary);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.infoItem h4 {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1c88ba;
+}
+
+.infoItem p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.form {
+    width: 100%;
+}
+
+.formGroup {
+    padding-bottom: 8px;
+}
+
+.input,.textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 12px 15px;
+}
+
+.input:focus,.textarea:focus{
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+.textarea {
+  padding: 10px 12px;
+}
+
+.btn {
+  background: #1f98d1;
+  border: 0;
+  padding: 12px 40px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: var(--color-primary);
+}

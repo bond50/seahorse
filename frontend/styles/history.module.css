@@ -1,0 +1,11 @@
+ .Header {
+  font-weight: 700;
+  font-size: 36px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
+ .para {
+  margin: 30px 0;
+  color: #29486a;
+}

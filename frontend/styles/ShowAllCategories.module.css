@@ -1,0 +1,22 @@
+.Categories {
+    list-style: none;
+    padding: 0;
+}
+
+.Categories li + li {
+    padding-top: 10px;
+}
+
+.Categories a {
+    color: var(--color-secondary);
+    font-size: 15px;
+}
+
+.Categories a:hover {
+    color: var(--color-default);
+}
+.Categories a span {
+    padding-left: 5px;
+    color: rgba(var(--color-default), 0.4);
+    font-size: 14px;
+}

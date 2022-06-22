@@ -1,0 +1,66 @@
+.postBox {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 10px 40px 10px;
+    background: var(--color-white);
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.postImage {
+    overflow: hidden;
+    margin: -30px -30px 15px -30px;
+    position: relative;
+}
+
+.postImage img {
+    transition: 0.5s;
+    width: 100%; /* or max-width: 100%; */
+    height: auto;
+
+}
+
+.postDate {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-default);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.postTitle {
+    font-size: 18px;
+    color: var(--color-default);
+    font-weight: 700;
+    margin-bottom: 9px;
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.3s;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-primary);
+    transition: 0.3s;
+}
+
+.btn i {
+    line-height: 0;
+    margin-left: 4px;
+    font-size: 16px;
+    color: var(--color-primary);
+}
+
+/*.postBox:hover .postimage {*/
+/*    color: var(--color-primary);*/
+/*}*/
+
+.postBox:hover .postImage img {
+    transform: rotate(6deg) scale(1.2);
+}

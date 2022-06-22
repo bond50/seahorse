@@ -1,0 +1,71 @@
+.ServiceList {
+    padding: 10px 30px;
+    border: 1px solid #d5d7da;
+    margin-bottom: 20px;
+}
+
+.ServiceList a {
+    display: block;
+    line-height: 1;
+    padding: 8px 0 8px 15px;
+    border-left: 3px solid #d9e3e8;
+    margin: 20px 0;
+    color: var(--color-secondary);
+    transition: 0.3s;
+}
+
+.ServiceList a:first-letter {
+    text-transform: capitalize;
+}
+
+.ServiceList a.active {
+    font-weight: 700;
+    border-color: var(--color-primary);
+}
+
+.ServiceList a:hover {
+    border-color: var(--color-primary);
+}
+
+.Img {
+    margin-bottom: 20px;
+}
+
+
+.Detail h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.Detail h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.Detail h4:first-letter, .Detail h3:first-letter {
+    text-transform: capitalize;
+}
+
+.Detail p {
+    font-size: 15px;
+}
+
+.Detail ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+
+.Detail ul li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.Detail ul li:before {
+    content: "\F26A";
+    font-size: 20px;
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    color: var(--color-primary);
+}

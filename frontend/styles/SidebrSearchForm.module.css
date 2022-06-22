@@ -1,0 +1,66 @@
+.Form {
+    background: #fff;
+    border: 1px solid rgba(27, 47, 69, 0.2);
+    padding: 3px 10px;
+    position: relative;
+
+}
+
+.Form input {
+    border: 0;
+    padding: 4px;
+    border-radius: 4px;
+    width: calc(100% - 40px);
+    outline: none;
+}
+
+
+.Button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 15px;
+    margin: -1px;
+    background: var(--color-primary);
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 0 4px 4px 0;
+    line-height: 0;
+}
+
+.Button i {
+    line-height: 0;
+}
+
+.Button:hover {
+    background: rgba(86, 184, 230, 0.8);
+}
+
+.Searched {
+    background: rgba(86, 184, 230, 0.8);
+    width: 26vw;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.5s;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.Searched p {
+    font-style: italic;
+    color: #f1f6fd !important;
+
+}
+
+
+.Text {
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #f1f6fd !important;
+
+}
