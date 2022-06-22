@@ -12,11 +12,8 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 export const preSignup = (req, res) => {
-    let clientUrl = process.env.CLIENT_URL1
-    if (process.env.NODE_ENV === 'production') {
-        console.log(process.env.NODE_ENV)
-        clientUrl = process.env.CLIENT_URL
-    }
+    let clientUrl = process.env.CLIENT_URL
+
     const {name, email, password, role} = req.body
     User.findOne({email: email.toLowerCase()}, (err, user) => {
         if (user) {
