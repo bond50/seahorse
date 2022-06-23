@@ -3,14 +3,17 @@ import React, {useEffect, useState} from 'react';
 import SideCatTags from "../reusables/forms/side-cat-tags";
 import Image from "next/image";
 import {API} from "../../config";
-import Router, {useRouter} from "next/router";
-import CreateForm from "../reusables/forms/CreateForm";
-import {getCookie, isAuth} from "../../actions/auth";
+import  {useRouter} from "next/router";
+import {getCookie} from "../../actions/auth";
 import {singleBlog, updateBlog} from "../../actions/blog";
 import {getCategories} from "../../actions/category";
 import {getTags} from "../../actions/tag";
-import Alert from "../messages/Alert";
+import dynamic from "next/dynamic";
+import 'react-quill/dist/quill.snow.css';
+import {QuillFormats, QuillModules} from '/..../../helpers/quill';
 
+const ReactQuill = dynamic(() => import('react-quill'), {ssr: false});
+import Alert from "../messages/Alert";
 
 const BlogUpdate = () => {
     const [body, setBody] = useState('');
@@ -30,7 +33,7 @@ const BlogUpdate = () => {
         loading: false
     });
 
-    const {error, success, formData, title} = values;
+    const {error, success, loading, formData, title} = values;
     const token = getCookie('token');
     const router = useRouter()
 
@@ -181,20 +184,20 @@ const BlogUpdate = () => {
 
     const editBlog = e => {
         e.preventDefault();
+        setValues({...values, loading: true});
         updateBlog(formData, token, router.query.slug)
             .then(data => {
                 if (data.error) {
-                    setValues({...values, error: data.error});
-                } else {
-                    setValues({...values, title: '', success: `Blog titled "${data.title}" is successfully updated`});
+                    setValues({...values, loading: false,error: data.error});
 
-                    if (isAuth() && isAuth().role === 1) {
-                        // Router.replace(`/admin2/gencrud/${router.query.slug}`);
-                        Router.replace(`/admin`).then(r => console.log(r));
-                    } else if (isAuth() && isAuth().role === 0) {
-                        // Router.replace(`/user/crud/${router.query.slug}`);
-                        Router.replace(`/user`).then(r => console.log(r));
-                    }
+                } else {
+                    setValues({
+                        ...values,
+                        title: '',
+                        loading: false,
+                        success: `Blog titled "${data.title}" is successfully updated`
+                    });
+
                 }
             });
     };
@@ -226,7 +229,7 @@ const BlogUpdate = () => {
                             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Accept</label>
                         </div>
 
-                      <div className="form-check form-switch">
+                        <div className="form-check form-switch">
                             <input
                                 className="form-check-input"
                                 type="checkbox"
@@ -238,13 +241,37 @@ const BlogUpdate = () => {
                     </div>
                 </div>
 
-                <CreateForm
-                    handleChange={handleChange}
-                    handleBody={handleBody}
-                    bodyValue={body}
-                    btnCapture={'Update'}
-                    titleValue={title}
-                    onSubmit={editBlog}/>
+
+
+                <form onSubmit={editBlog}>
+                    <div className="form-group mb-3">
+                        <label className="text-muted">Title</label>
+                        <input
+                            type="text"
+                            name='title'
+                            className="form-control"
+                            value={title}
+                            onChange={handleChange('title')}/>
+                    </div>
+
+                    <div className="form-group mb-3">
+                        <ReactQuill
+                            modules={QuillModules}
+                            formats={QuillFormats}
+                            value={body}
+                            onChange={handleBody}
+                        />
+                    </div>
+
+                    <div>
+                        <button type="submit" className="btn btn-primary">
+                            {loading ? <>
+                        <span className="spinner-grow spinner-grow-sm"
+                              role="status"
+                              aria-hidden="true"/> Please wait...</> : 'Update'}
+                        </button>
+                    </div>
+                </form>
 
                 <div className="mb-3">
                     <br/>

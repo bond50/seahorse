@@ -23,7 +23,7 @@ const useCreate = (localStorageItem, catEndpoint, tagEndpoint, pageEndpoint) => 
     });
 
 
-    const {error, sizeError, success, formData, title, hidePublishButton} = values;
+    const {error, sizeError, success, formData, title,loading, hidePublishButton} = values;
 
     const token = getCookie('token');
     const {data: categories, error: catError} = useFCT(catEndpoint)
@@ -159,7 +159,8 @@ const useCreate = (localStorageItem, catEndpoint, tagEndpoint, pageEndpoint) => 
         error,
         success,
         title,
-        body
+        body,
+        loading
     }
 }
 export default useCreate;

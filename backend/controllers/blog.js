@@ -24,6 +24,7 @@ export const create = (req, res) => {
 
         const {title, body, categories, tags} = fields;
 
+
         if (!title || !title.length) {
             return res.status(400).json({
                 error: 'title is required'
@@ -231,7 +232,8 @@ export const update = (req, res) => {
             oldBlog = _.merge(oldBlog, fields);
             oldBlog.slug = slugBeforeMerge;
 
-            const {body, desc, categories, tags} = fields;
+            const {body, categories, tags} = fields;
+
 
             if (body) {
                 oldBlog.excerpt = smartTrim(body, 320, ' ', ' ...');
@@ -246,13 +248,16 @@ export const update = (req, res) => {
                 oldBlog.tags = tags.split(',');
             }
 
-            const dimensions = sizeOf(fs.readFileSync(files.photo.path))
+
             if (files.photo) {
+
                 if (files.photo.size > 10000000) {
                     return res.status(400).json({
                         error: 'Image should be less then 1mb in size'
                     });
                 }
+
+                const dimensions = sizeOf(fs.readFileSync(files.photo.path))
                 oldBlog.photo.data = fs.readFileSync(files.photo.path);
                 oldBlog.photo.contentType = files.photo.type;
                 oldBlog.imgHeight = dimensions.height

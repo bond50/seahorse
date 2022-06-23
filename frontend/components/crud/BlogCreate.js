@@ -51,7 +51,7 @@ const CreateBlog = () => {
                             {loading ? <>
                         <span className="spinner-grow spinner-grow-sm"
                               role="status"
-                              aria-hidden="true"/> Updating...</> : 'Update'}
+                              aria-hidden="true"/> Publishing...</> : 'Publish'}
                         </button>
                     </div>
                 </form>

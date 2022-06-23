@@ -16,7 +16,6 @@ export const singleBlog = (slug) => {
 };
 
 
-
 export const listRelated = (options) => {
     return fetch(`${API}/blogs/related`, options)
         .then(response => {
@@ -87,17 +86,9 @@ export const removeBlog = (slug, token) => {
 
 
 export const updateBlog = (blog, token, slug) => {
-    let updateBlogEndpoint
-
-    if (isAuth() && isAuth().role === 1) {
-        updateBlogEndpoint = `${API}/blog/${slug}`
-
-    } else if (isAuth() && isAuth().role === 0) {
-        updateBlogEndpoint = `${API}/user/blog/${slug}`
-    }
 
 
-    return fetch(`${updateBlogEndpoint}`, {
+    return fetch(`${API}/blog/${slug}`, {
         method: 'PUT',
         headers: {
             Accept: 'application/json',
@@ -111,7 +102,6 @@ export const updateBlog = (blog, token, slug) => {
         })
         .catch(err => console.log(err));
 };
-
 
 
 export const listSearch = params => {
