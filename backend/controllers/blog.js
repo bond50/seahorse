@@ -334,7 +334,7 @@ export const listSearch = (req, res) => {
 export const listHomePageBlogs = (req, res) => {
     Blog.find({accepted: true})
         .select('_id title slug imgWidth imgHeight excerpt createdAt updatedAt')
-        .limit(6)
+        .limit(3)
         .sort({createdAt: -1})
         .exec((err, data) => {
             if (err) {
