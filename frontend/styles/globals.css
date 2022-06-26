@@ -592,7 +592,7 @@ section {
     margin-top: 50px;
 }
 
-.alt-services .icon-box i {
+.alt-services .icon-box i,.alt-services .icon-box .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -608,7 +608,7 @@ section {
     transition: 0.3s;
 }
 
-.alt-services .icon-box:hover i {
+.alt-services .icon-box:hover i,.alt-services .icon-box:hover .icon {
     background-color: var(--color-primary);
     color: var(--color-white);
 }

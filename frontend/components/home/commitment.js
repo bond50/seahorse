@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 
 const Commitment = () => {
     return (
@@ -23,7 +24,7 @@ const Commitment = () => {
                             use of Renewable which includes the use of </p>
 
                         <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
-                            <i className="bi bi-sun flex-shrink-0"></i>
+                           <Icon icon="openmoji:solar-energy"  className='flex-shrink-0 icon'/>
                             <div>
                                 <h4><a href="" className="stretched-link">Solar power</a></h4>
                                 <p>Create and generate solar electricity to emerging markets. Schools, Businesses
@@ -33,7 +34,8 @@ const Commitment = () => {
 
 
                         <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
-                            <i className="bi bi-wind flex-shrink-0"></i>
+                             <Icon icon="ic:outline-wind-power"  className='flex-shrink-0 icon'/>
+
                             <div>
                                 <h4><a href="" className="stretched-link">Wind power</a></h4>
                                 <p>The process by which the wind is used to generate mechanical power or
@@ -44,7 +46,8 @@ const Commitment = () => {
 
 
                         <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
-                            <i className="bi bi-water flex-shrink-0"></i>
+                            <Icon icon="mdi:hydro-power"  className='flex-shrink-0 icon'/>
+
                             <div>
                                 <h4><a href="" className="stretched-link">Hydro-Electric power</a></h4>
                                 <p> Form of energy that harnesses the power of water in motion—such as water flowing
@@ -54,7 +57,7 @@ const Commitment = () => {
 
 
                         <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-                            <i className="bi bi-brightness-high flex-shrink-0"></i>
+                            <Icon icon="arcticons:fuelflash"  className='flex-shrink-0 icon'/>
                             <div>
                                 <h4><a href="" className="stretched-link">Biomass fuels</a></h4>
                                 <p>Biomass fuels are organic materials produced in a renewable manner</p>
