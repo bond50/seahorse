@@ -6,14 +6,14 @@ import {trim} from "../reusables/functions/trim";
 import renderHTML from "html-react-parser";
 import {API} from "../../config";
 
-const Services = () => {
+const Services = ({className}) => {
     const {data, error} = useSWR({url: `/services`, method: 'get'}, fetcher);
     if (error) return <div>failed to load</div>
     if (!data) return <div id='preloader'/>
 
 
     return (
-        <section id="services">
+        <section id="services" className={className}>
             <div className="container" data-aos="fade-up">
                 <div className="section-header">
                     <h2>Products and Services</h2>

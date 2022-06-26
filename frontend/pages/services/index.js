@@ -56,7 +56,7 @@ const Slug = () => {
                 breadcrumbHeader2={`Products and services`}
                 breadImg={`/img/service/windmill.jpg`}
             >
-                <Services/>
+                <Services className='section-bg'/>
                 {/*<FinancialInformation/>*/}
                 <WhoWeServe/>
             </Layout>

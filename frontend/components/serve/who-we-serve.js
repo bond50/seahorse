@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from '../../styles/serve.module.css'
 import {Icon} from '@iconify/react';
+import {YearsOperated} from "../years-operated/YearsOperated";
 
 const WhoWeServe = () => {
     const list = [
@@ -23,7 +24,7 @@ const WhoWeServe = () => {
 
                     <div className="col-lg-6 ">
                         <h3 className='text-center'>Who we serve</h3>
-                        <p className={classes.para}>The company has been in business for over three years now and or
+                        <p className={classes.para}>The company has been in business for <YearsOperated/> years now and
                             clients include those in the:</p>
                         <div className="row gy-4 mx-3">
                             {list.map((item, i) => {
