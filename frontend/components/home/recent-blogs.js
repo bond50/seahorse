@@ -21,7 +21,7 @@ const RecentBlogs = () => {
                     <h2>Latest articles</h2>
                     <p>Visit <Link href='/blogs'>
                         <a>here </a>
-                    </Link> for more articles
+                    </Link> for all blogs
                     </p>
                 </div>
 

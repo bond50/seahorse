@@ -12,7 +12,7 @@ const Commitment = () => {
                     <div className="col-lg-6 img-bg" style={{
                         backgroundImage:
                             'url(' +
-                            'img/seahorse/solar.jpg' +
+                            '/img/home/white-male.jpg' +
                             ')'
                     }}
                          data-aos="zoom-in" data-aos-delay="100"/>
