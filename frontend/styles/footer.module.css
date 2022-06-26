@@ -1,5 +1,5 @@
 .footer {
-    color: var(--color-black-logo);
+    color: var(--color-default);
     font-size: 14px;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .recent ul a {
-    color: var(--color-black-logo);
+    color: var(--color-secondary);
 
 }
 

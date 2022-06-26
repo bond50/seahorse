@@ -5,6 +5,7 @@ import HomeHero from "../components/hero/home-hero";
 import Footer from "../components/footer/footer";
 import Breadcrumbs from "../components/reusables/Breadcrumbs";
 import ScrollTop from "../components/ScrollTop";
+import Top from "../components/navigation/top";
 
 const Layout = ({children, hero, breadcrumb, breadcrumbHeader2, header2Class, breadImg}) => {
     let bg = false
@@ -14,6 +15,7 @@ const Layout = ({children, hero, breadcrumb, breadcrumbHeader2, header2Class, br
 
     return (
         <Fragment>
+            <Top/>
             <Header noBg={bg}/>
             {hero && <HomeHero/>}
             <main id="main">

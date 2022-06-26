@@ -1,0 +1,46 @@
+.top {
+    background: var(--color-primary);
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    color: var(--color-white);
+    padding: 0;
+}
+
+.icon {
+    font-style: normal;
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    color: var(--color-white);
+}
+.i{
+
+    font-size: 18px;
+}
+
+.icon a, .icon span{
+    padding-left: 5px;
+    color: var(--color-white);
+}
+
+.link {
+    line-height: 0;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.socialLinks a {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 0;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.socialLinks a:hover {
+    color: white;
+}

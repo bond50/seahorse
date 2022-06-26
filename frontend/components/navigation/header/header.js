@@ -3,29 +3,33 @@ import Link from "next/link";
 import Image from "next/image";
 import useToggle from "../../../hooks/useToggle";
 import Navbar from "./navbar";
+import Top from "../top";
 
 const Header = ({noBg}) => {
     const [scrolled, setScrolled] = useState(false);
     const handleScroll = () => {
         const offset = window.scrollY;
-        if (offset > 100) {
+        if (offset > 30) {
             setScrolled(true);
         } else {
             setScrolled(false);
         }
     }
 
-    let navbarClasses = [`header d-flex align-items-center fixed-top `];
+    let navbarClasses = [`header d-flex align-items-center `];
     if (scrolled) {
-        navbarClasses.push('sticked')
+        navbarClasses.push('fixed-top ')
     }
-    if (noBg && scrolled) {
-        navbarClasses.push('sticker')
-    }
-
-    if (noBg && !scrolled) {
-        navbarClasses.push('transparent')
-    }
+    // if (noBg){
+    //       navbarClasses.push('fixed-top')
+    // }
+    // if (noBg && scrolled) {
+    //     navbarClasses.push('sticker')
+    // }
+    //
+    // if (noBg && !scrolled) {
+    //     navbarClasses.push('transparent')
+    // }
 
 
     useEffect(() => {
@@ -35,16 +39,6 @@ const Header = ({noBg}) => {
 
     const [closed, toggleClosed] = useToggle();
 
-
-    const list = [
-        {to: '/', caption: 'Home'},
-        {to: '/about', caption: 'About us'},
-        {to: '/services', caption: 'Services'},
-        {to: '/team', caption: 'Team'},
-        {to: '/blogs', caption: 'Blog'},
-        {to: '/contact', caption: 'Contact us'},
-        {to: 'https://srv.tailifestyle.com:2087/roundcube/', caption: 'Webmail'},
-    ]
 
     return (
         <div className={closed ? `mobile-nav-active` : ''}>

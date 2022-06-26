@@ -10,6 +10,7 @@ const Navbar = ({scrolled, toggleClosed}) => {
         {to: '/services', caption: 'Services'},
         {to: '/team', caption: 'Team'},
         {to: '/blogs', caption: 'Blog'},
+        {to: '/media', caption: 'Media center'},
         {to: '/contact', caption: 'Contact us'},
     ]
 

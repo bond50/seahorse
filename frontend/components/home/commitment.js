@@ -34,7 +34,7 @@ const Commitment = () => {
 
 
                         <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
-                             <Icon icon="ic:outline-wind-power"  className='flex-shrink-0 icon'/>
+                             <Icon icon="material-symbols:wind-power-sharp"  className='flex-shrink-0 icon'/>
 
                             <div>
                                 <h4><a href="" className="stretched-link">Wind power</a></h4>

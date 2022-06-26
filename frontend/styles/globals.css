@@ -199,26 +199,10 @@ section {
 # Header
 --------------------------------------------------------------*/
 .header {
+    background: #fff;
     transition: all 0.5s;
     z-index: 997;
-    padding: 12px 0;
-    background-color: #ffffff;
-}
-
-
-@media (max-width: 1200px) {
-    .header {
-        padding: 6px 0;
-    }
-}
-
-.header.sticked {
-     background-color: rgba(16, 61, 103, 0.85);;
-    padding: 6px 0;
-}
-
-.header.transparent {
-    background: transparent;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -243,6 +227,11 @@ section {
 
     .navbar li {
         position: relative;
+        border-left: 1px solid #e1e1e1;
+    }
+
+    .navbar li:last-child {
+        border-right: 1px solid #e1e1e1;
     }
 
     .navbar a,
@@ -250,17 +239,13 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px 0 15px 30px;
+        padding: 15px 30px 15px 30px;
         font-family: var(--font-default);
         font-size: 15px;
         font-weight: 500;
         color: var(--color-secondary);
         white-space: nowrap;
         transition: 0.3s;
-    }
-
-    .nav-scrolled a, .nav-scrolled a:focus, .transparent .navbar a, .transparent .navbar a:focus {
-        color: rgba(255, 255, 255, 0.6);
     }
 
 
@@ -276,16 +261,6 @@ section {
     .navbar .active:focus,
     .navbar li:hover > a {
         color: var(--color-primary);
-    }
-
-    .nav-scrolled a:hover,
-    .transparent .navbar a:hover,
-    .nav-scrolled a.active,
-    .transparent .navbar a.active,
-    .nav-scrolled a:focus,
-    .nav-scrolled .navbar li:hover > a,
-    .transparent .navbar li:hover > a {
-        color: #ffffff;
     }
 
 }
@@ -397,7 +372,7 @@ section {
 
 .hero {
     width: 100%;
-    min-height:90vh;
+    min-height: 100vh;
     background: url("/img/hero/hero.jpg") top center;
     background-size: cover;
     position: relative;
@@ -409,20 +384,19 @@ section {
     .hero:after {
         position: absolute;
         content: "";
-        width: 100%;
-        background-color: rgba(16, 61, 103, 0.89);
-        /*background: linear-gradient(var(--color-white), var(--color-secondary-dark), rgba(0, 0, 0, 8));*/
+        width: 40%;
+        background: var(--color-primary);
         top: 0;
         bottom: 0;
     }
 }
 
-/*.hero:before {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    background: rgba(27, 47, 69, 0.6);*/
-/*    inset: 0;*/
-/*}*/
+.hero:before {
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.1);
+    inset: 0;
+}
 
 /*@media (max-width: 1034px) {*/
 /*    .hero:before {*/
@@ -443,7 +417,7 @@ section {
 .hero h2 {
     margin: 0;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.2;
     color: #fff;
     font-family: var(--font-secondary);
@@ -454,7 +428,7 @@ section {
     padding-left: 20px;
     font-size: 15px;
     font-family: var(--font-default);
-    border-left: 2px solid var(--color-primary);
+    border-left: 2px solid var(--color-white);
     margin: 40px 0;
 }
 
@@ -465,16 +439,32 @@ section {
     letter-spacing: 1px;
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 50px;
+
     transition: 0.5s;
-    color: #fff;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background: var(--color-white);
+
+}
+
+.hero .custom-btn:hover {
     background: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
 }
 
-.hero .btn-get-started:hover {
-    background: rgba(86, 184, 230, 0.8);
+.hero .custom-btn.contact {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50px;
+    border: 1px solid var(--color-white);
 }
 
+.hero .custom-btn.contact:hover {
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background: var(--color-white)
+}
 
 @media (max-width: 640px) {
     .hero h2 {
@@ -592,7 +582,7 @@ section {
     margin-top: 50px;
 }
 
-.alt-services .icon-box i,.alt-services .icon-box .icon {
+.alt-services .icon-box .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -608,7 +598,7 @@ section {
     transition: 0.3s;
 }
 
-.alt-services .icon-box:hover i,.alt-services .icon-box:hover .icon {
+.alt-services .icon-box:hover .icon {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
@@ -692,7 +682,6 @@ section {
     top: -3px;
 
 }
-
 
 
 .scroll-top {

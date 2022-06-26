@@ -44,13 +44,17 @@ const Index = () => {
 
 
     return (
-        <Layout
+        <>
+            {head()}
+              <Layout
             breadcrumb
             breadcrumbHeader2={`Contact us`}
             breadImg={`/img/contact/contact1.jpg`}
         >
             <Contact/>
         </Layout>
+        </>
+
     );
 };
 
