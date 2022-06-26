@@ -1,6 +1,6 @@
 .wrapper {
     position: relative;
-    padding: 100px 0;
+    padding: 60px 0;
     z-index: 0;
 }
 
@@ -28,13 +28,14 @@
 .container p {
     color: var(--color-white);
     margin-bottom: 25px;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 .container:before {
     position: absolute;
     content: "";
     width: 100%;
-    background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8));
+    background: linear-gradient(rgba(27, 47, 69, 0.5), rgba(23, 55, 91, 0.9));
     top: 0;
     bottom: 0;
 }

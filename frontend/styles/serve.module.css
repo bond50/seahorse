@@ -1,0 +1,31 @@
+.serve{
+    background: #efefef;
+}
+
+.serve h3 {
+    color: var(--color-primary);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.iconList span {
+    font-size: 16px;
+    color: var(--color-primary);
+}
+
+.para {
+    margin-bottom: 20px;
+    color: #353535;
+   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.para:last-child {
+    margin-top: 40px;
+}

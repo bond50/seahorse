@@ -6,6 +6,7 @@ import Services from "../../components/home/services";
 import FinancialInformation from "../../components/finacial/financial-information";
 import {useRouter} from "next/router";
 import {APP_NAME, DOMAIN} from "../../config";
+import WhoWeServe from "../../components/serve/who-we-serve";
 
 const Slug = () => {
 
@@ -57,6 +58,7 @@ const Slug = () => {
             >
                 <Services/>
                 {/*<FinancialInformation/>*/}
+                <WhoWeServe/>
             </Layout>
         </>
 

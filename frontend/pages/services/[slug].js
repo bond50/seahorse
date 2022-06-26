@@ -67,8 +67,8 @@ const Slug = ({service, query}) => {
                                     })}
                                 </div>
 
-                                <h4>{service.title}</h4>
-                                {renderHTML(trim(service.excerpt, 240))}
+                                {/*<h4>{service.title}</h4>*/}
+                                {/*{renderHTML(trim(service.excerpt, 240))}*/}
                             </div>
 
                             <div className={`col-lg-8`}>

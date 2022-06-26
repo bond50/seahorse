@@ -6,7 +6,7 @@ const Cta = () => {
     return (
         <section className={classes.wrapper}>
             <Image
-                src={'https://images.pexels.com/photos/870711/pexels-photo-870711.jpeg?cs=srgb&dl=pexels-julius-silver-870711.jpg&fm=jpg'}
+                src={'/img/about/energy.jpg'}
                 layout='fill'
                 objectFit={'cover'}
                 alt={'Cta| seahorse energy LTD'}
@@ -17,10 +17,10 @@ const Cta = () => {
                 <div className="container" data-aos="fade-up">
 
                     <div className="row justify-content-center">
+                        <h3 className='text-center'>Environmental Policy Strategy</h3>
+                        <div className="col-lg-8 text-lg-start text-sm-center">
 
-                        <div className="col-lg-8 text-center">
-                            <h3>Environmental Policy Strategy</h3>
-                              <p>Over the years, SeaHorse has contributed effectively to the community and since 2018; it
+                            <p>Over the years, SeaHorse has contributed effectively to the community and since 2018; it
                                 has systematically participated in environmental protection by advocating the use of
                                 renewable energy such as Solar power, Wind power, Hydroelectric power and Biomass fuels.
                                 With this in mind, SeaHorse aims at providing tangible, prompt and specific tailor- made

@@ -2,19 +2,20 @@ import React from 'react';
 import Link from "next/link";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
+import classes from '../../styles/footer.module.css'
 
 const Footer = () => {
-
-       const {data: services, error} = useSWR({url: `/services`, method: 'get'}, fetcher);
+    const {data: blogs, error:blogErr} = useSWR({url: `/list-recent-blogs`, method: 'get'}, fetcher);
+    const {data: services, error} = useSWR({url: `/services`, method: 'get'}, fetcher);
     if (error) return <div>failed to load</div>
     if (!services) return <div>loading...</div>
     return (
-        <footer id="footer" className="footer">
-            <div className="footer-content">
+        <footer className={classes.footer}>
+            <div className={classes.footerContent}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3 col-md-6">
-                            <div className="footer-info">
+                        <div className="col-lg-4 col-md-6">
+                            <div className={classes.footerInfo}>
                                 <h3>Seahorse Energy</h3>
                                 <p>
                                     Head,Office ,Sea View Plaza,2nd Floor-Magaret Avenue <br/>
@@ -25,7 +26,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-2 col-md-6 footer-links">
+                        <div className={`col-lg-2 col-md-6 ${classes.footerLinks}`}>
                             <h4>Useful Links</h4>
                             <ul>
                                 <li><i className="bi bi-chevron-right"/> <Link href="/"><a> Home</a></Link>
@@ -41,12 +42,11 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-links">
+                        <div className={`col-lg-2 col-md-6 ${classes.footerLinks}`}>
                             <h4>Our Products</h4>
-
                             <ul>
 
-                                 {services.map(service => (
+                                {services.map(service => (
                                     <li key={service._id}><i className="bi bi-chevron-right"/>
                                         <Link href={`/services/${service.slug}`}>
                                             <a>{service.title}</a>
@@ -56,11 +56,18 @@ const Footer = () => {
 
                             </ul>
                         </div>
-
-                        <div className="col-lg-4 col-md-6 footer-newsletter">
-                            <h4>About</h4>
-                            <p>We provide solutions to Region&#39;s greatest Energy challenges</p>
-
+                        <div className={`col-lg-3 col-md-6 ${classes.recent}`}>
+                            <h4>Latest articles</h4>
+                            <ul>
+                                {blogs.map(blog => (
+                                    <li key={blog._id}>
+                                        <i className="bi bi-dash"/>
+                                        <Link href={`/blogs/${blog.slug}`}>
+                                            <a>{blog.title}</a>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
 
                         </div>
 
@@ -68,7 +75,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="footer-legal text-center">
+            <div className={`${classes.footerLegal} text-center`}>
                 <div
                     className="container">
 

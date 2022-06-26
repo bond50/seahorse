@@ -11,6 +11,7 @@ import Head from "next/head";
 import {APP_NAME} from "../../config";
 import {useRouter} from "next/router";
 import * as DOMAIN from "domain";
+import Objective from "../../components/about/objective";
 
 
 const Index = () => {
@@ -71,6 +72,7 @@ const Index = () => {
                 <Values/>
                 <Vision/>
                 <Policy/>
+                <Objective/>
             </Layout>
         </Fragment>
     );

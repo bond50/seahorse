@@ -15,7 +15,7 @@ const RecentBlogs = () => {
     if (error) return <div>failed to load recent blogs</div>
     if (!blogs) return <div id='preloader'/>
     return (
-        <section className="">
+        <section className="section-bg">
 
             <div className="container" data-aos="fade-up">
 
