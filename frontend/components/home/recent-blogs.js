@@ -41,7 +41,8 @@ const RecentBlogs = () => {
                                 </div>
                                 <div className={classes.meta}>
                                     <span className={classes.postDate}>{dayjs(blog.updatedAt).format("ddd, MMM D, YYYY h:mm A")}</span>
-                                    <span className={classes.postAuthor}> / {blog.postedBy.name}</span>
+                                    {/*<span className={classes.postAuthor}> / {blog.postedBy.name}</span>*/}
+                                    <span className={classes.postAuthor}> / Admin </span>
                                 </div>
                                 <h3 className={classes.postTitle}>{blog.title.toLowerCase()}</h3>
                                      {renderHTML(blog.excerpt.length >= 100 ? `${blog.excerpt.substring(0, 100)}...` : blog.excerpt)}
