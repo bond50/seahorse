@@ -2,7 +2,7 @@ import React from 'react';
 
 const Commitment = () => {
     return (
-        <section id="alt-services" className="alt-services">
+        <section  className="alt-services section-bg">
             <div className="container" data-aos="fade-up">
                 <div className="section-header">
                     <h2>Our commitment to renewable clean energy</h2>

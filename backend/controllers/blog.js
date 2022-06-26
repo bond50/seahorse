@@ -333,8 +333,9 @@ export const listSearch = (req, res) => {
 
 export const listHomePageBlogs = (req, res) => {
     Blog.find({accepted: true})
-        .select('_id title slug imgWidth imgHeight excerpt createdAt updatedAt')
-        .limit(3)
+        .populate('postedBy', '_id name')
+        .select('_id title slug imgWidth postedBy imgHeight excerpt createdAt updatedAt')
+        .limit(4)
         .sort({createdAt: -1})
         .exec((err, data) => {
             if (err) {

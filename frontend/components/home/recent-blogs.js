@@ -15,10 +15,8 @@ const RecentBlogs = () => {
     if (error) return <div>failed to load recent blogs</div>
     if (!blogs) return <div id='preloader'/>
     return (
-        <section className="section-bg">
-
+        <section  >
             <div className="container" data-aos="fade-up">
-
                 <div className="section-header">
                     <h2>Latest articles</h2>
                     <p>Visit <Link href='/blogs'>
@@ -27,40 +25,42 @@ const RecentBlogs = () => {
                     </p>
                 </div>
 
-                <div className="row">
-                    {blogs.map(blog => {
-                        return <div className="col-lg-4" key={blog._id}>
+                <div className="row gy-5">
+                    {blogs && blogs.map((blog, i) => {
+                        return <div className="col-xl-3 col-md-6"
+                                    data-aos="fade-up"
+                                    data-aos-delay="100" key={i + 1 + 100}>
                             <div className={classes.postBox}>
-                                <div className={classes.postImage}>
-                                    <Image
+                                <div className={classes.postImg}>
+                                     <Image
                                         width={blog.imgWidth}
                                         height={blog.imgHeight}
                                         src={`${API}/blog/photo/${blog.slug}`}
                                         className="img-fluid"
                                         alt={blog.title}/>
                                 </div>
-                                <span
-                                    className={classes.postDate}> {dayjs(blog.updatedAt).format("ddd, MMM D, YYYY h:mm A")}</span>
+                                <div className={classes.meta}>
+                                    <span className={classes.postDate}>{dayjs(blog.updatedAt).format("ddd, MMM D, YYYY h:mm A")}</span>
+                                    <span className={classes.postAuthor}> / {blog.postedBy.name}</span>
+                                </div>
                                 <h3 className={classes.postTitle}>{blog.title.toLowerCase()}</h3>
-                                {renderHTML(blog.excerpt.length >= 160 ? `${blog.excerpt.substring(0, 80)}...` : blog.excerpt)}
-                                <Link href={`/blogs/${blog.slug}`}>
-                                    <a className={`${classes.btn}  mt-auto`}>
-                                        <span> More about the article</span><i
-                                        className="bi bi-arrow-right"/>
+                                     {renderHTML(blog.excerpt.length >= 100 ? `${blog.excerpt.substring(0, 100)}...` : blog.excerpt)}
+                                 <Link href={`/blogs/${blog.slug}`}>
+                                    <a className={`${classes.readMore}  stretched-link`}>
+                                        <span> More about the article</span>
+                                          <i className="bi bi-arrow-right"/>
                                     </a>
                                 </Link>
                             </div>
                         </div>
                     })}
 
-
                 </div>
-
             </div>
-
         </section>
     )
-        ;
+
 };
 
 export default RecentBlogs;
+

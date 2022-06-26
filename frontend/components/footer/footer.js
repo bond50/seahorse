@@ -46,7 +46,7 @@ const Footer = () => {
                             <h4>Our Products</h4>
                             <ul>
 
-                                {services.map(service => (
+                                {services && services.map(service => (
                                     <li key={service._id}><i className="bi bi-chevron-right"/>
                                         <Link href={`/services/${service.slug}`}>
                                             <a>{service.title}</a>
@@ -57,11 +57,11 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className={`col-lg-3 col-md-6 ${classes.recent}`}>
-                            <h4>Latest articles</h4>
+                            <h4>Recent Blog Posts</h4>
                             <ul>
-                                {blogs.map(blog => (
+                                {blogs && blogs.map(blog => (
                                     <li key={blog._id}>
-                                        <i className="bi bi-dash"/>
+                                        <i className="bi bi-dash-lg"/>
                                         <Link href={`/blogs/${blog.slug}`}>
                                             <a>{blog.title}</a>
                                         </Link>

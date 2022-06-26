@@ -1,5 +1,5 @@
 .footer {
-    color: var(--color-primary);
+    color: var(--color-black-logo);
     font-size: 14px;
 }
 
@@ -64,6 +64,7 @@
 
 }
 
+
 .footerLinks ul i, .recent ul i {
     padding-right: 2px;
     color: var(--color-primary);
@@ -96,7 +97,7 @@
 }
 
 .recent ul a {
-    color: var(--color-secondary);
+    color: var(--color-black-logo);
 
 }
 

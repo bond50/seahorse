@@ -3,7 +3,7 @@ import Button from "../ui/button";
 
 const HomeHero = () => {
     return (
-        <section id="hero" className="hero d-flex align-items-center">
+        <section className="hero d-flex align-items-center">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-4">
