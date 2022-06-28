@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import styles from '../styles/srollTop.module.css'
 
 const ScrollTop = () => {
     const [visible, setVisible] = useState(false);
@@ -26,9 +27,9 @@ const ScrollTop = () => {
     }, [scrollToTop]);
 
 
-    let classes = [`scroll-top d-flex align-items-center justify-content-center`];
+    let classes = [`${styles.scrollTop} d-flex align-items-center justify-content-center`];
     if (visible) {
-        classes.push(`active`);
+        classes.push(styles.active);
     }
 
     return (

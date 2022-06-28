@@ -1,13 +1,13 @@
 import React from 'react';
-import Container1 from "../reusables/r-componens/container-1";
 import Container2 from "../reusables/r-componens/container-2";
-import classes from "../../styles/purpose.module.css";
 
-const Values = () => {
+
+const Values = ({ifSingle}) => {
     return (
         <Container2
             title={'Values'}
             className=''
+            single={ifSingle}
             alt={'Values'}
             imgPackage={'/img/seahorse/values.png'}
             height={720} width={1280}>

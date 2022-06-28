@@ -11,14 +11,15 @@
     color: var(--color-black-logo);
 }
 
-.Card h5 a {
+.Card h3 a {
     font-weight: 500;
+    font-size: 20px;
     text-transform: capitalize;
     margin-bottom: 5px;
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
-.Card h5 a:hover {
+.Card h3 a:hover {
     color: var(--color-primary-light);
 }
 
@@ -29,7 +30,7 @@
 }
 
 .Info a {
-    color:var(--color-primary);
+    color:var(--color-secondary);
 }
 
 .Info a:hover {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ValueCard from "../cards/value-card";
 
-const MissionVision = () => {
+const MissionVision = ({ifSingle}) => {
     const list = [
         {
             title: 'Mission',
@@ -23,9 +23,9 @@ const MissionVision = () => {
         <section id="values" className="values">
             <div className="container" data-aos="fade-up">
 
-                <div className="section-header">
+                {!ifSingle &&<div className="section-header">
                     <h2>Our Mission and Vision</h2>
-                </div>
+                </div>}
 
                 <div className="row">
                     {list.map((item, i) => (

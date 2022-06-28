@@ -51,6 +51,7 @@ const Slug = ({service, query}) => {
             <Layout
                 breadcrumb
                 breadcrumbHeader2={service.title}
+                alt={service.title}
                  breadImg={`/img/service/windmill.jpg`}
             >
                 <section className={classes.Detail}>

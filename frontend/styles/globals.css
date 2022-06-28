@@ -107,97 +107,14 @@ section {
     background-color: #f3f5fa;
 }
 
-/*--------------------------------------------------------------
-# Scroll top button
---------------------------------------------------------------*/
-.scroll-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-    background: var(--color-primary);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-}
 
-.scroll-top i {
-    font-size: 24px;
-    color: var(--color-white);
-    line-height: 0;
-}
-
-.scroll-top:hover {
-    background: rgba(86, 184, 230, 0.8);
-    color: var(--color-white);
-}
-
-.scroll-top.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    overflow: hidden;
-    background: var(--color-white);
-    transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 6px solid var(--color-primary);
-    border-top-color: var(--color-white);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    -webkit-animation: animate-preloader 1s linear infinite;
-    animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
     [data-aos-delay] {
         transition-delay: 0 !important;
     }
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+
 .header {
     background: #fff;
     transition: all 0.5s;
@@ -205,6 +122,11 @@ section {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 1200px) {
+    .header {
+        padding: 12px 0;
+    }
+}
 
 .header .logo img {
     max-height: 40px;
@@ -249,20 +171,17 @@ section {
     }
 
 
-    .navbar a i,
-    .navbar a:focus i {
-        font-size: 12px;
-        line-height: 0;
-        margin-left: 5px;
+
+}
+
+@media (min-width: 1280px) and (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
     }
 
-    .navbar a:hover,
-    .navbar .active,
-    .navbar .active:focus,
-    .navbar li:hover > a {
-        color: var(--color-primary);
+    .navbar .dropdown .dropdown:hover > ul {
+        left: -100%;
     }
-
 }
 
 
@@ -314,7 +233,7 @@ section {
         transition: 0.3s;
     }
 
-    .navbar a i,
+    .navbar a i, .dropdown-indicator, .dropdown-indicator:focus,
     .navbar a:focus i {
         font-size: 12px;
         line-height: 0;
@@ -327,6 +246,8 @@ section {
     .navbar li:hover > a {
         color: #fff;
     }
+
+
 
 
     .mobile-nav-show {
@@ -373,11 +294,19 @@ section {
 .hero {
     width: 100%;
     min-height: 100vh;
-    background: url("/img/hero/hero.jpg") top center;
     background-size: cover;
     position: relative;
     padding: 120px 0;
-    z-index: 3;
+    z-index: 1;
+
+}
+
+.hero .image {
+    z-index: 0;
+}
+
+.hero:after {
+    z-index: 2;
 }
 
 @media (min-width: 1034px) {
@@ -394,18 +323,19 @@ section {
 .hero:before {
     position: absolute;
     content: "";
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     inset: 0;
+    z-index: 1;
 }
 
-/*@media (max-width: 1034px) {*/
-/*    .hero:before {*/
-/*        background: rgba(27, 47, 69, 0.7);*/
-/*    }*/
-/*}*/
+@media (max-width: 1034px) {
+    .hero:before {
+        background: rgba(27, 47, 69, 0.7);
+    }
+}
 
 .hero .container {
-    z-index: 1;
+    z-index: 3;
 }
 
 @media (min-width: 1365px) {
@@ -456,7 +386,7 @@ section {
 .hero .custom-btn.contact {
     background: var(--color-primary);
     color: var(--color-white);
-    border-radius: 50px;
+    border-radius: 5px;
     border: 1px solid var(--color-white);
 }
 
@@ -559,7 +489,7 @@ section {
     padding: 30px;
 }
 
-.values .card-item h4 {
+.values .card-item h3 {
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 15px;
@@ -603,18 +533,18 @@ section {
     color: var(--color-white);
 }
 
-.alt-services .icon-box h4 {
+.alt-services .icon-box h3 {
     font-weight: 700;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-.alt-services .icon-box h4 a {
+.alt-services .icon-box h3 span {
     color: var(--color-black);
     transition: 0.3s;
 }
 
-.alt-services .icon-box h4 a:hover {
+.alt-services .icon-box h3 span:hover {
     color: var(--color-primary);
 }
 

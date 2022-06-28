@@ -51,6 +51,9 @@ const Search = () => {
                 type="submit"
                 className={classes.Button}>
                 <i className={`bi bi-search`}/>
+                <span>
+                    search
+                </span>
             </button>
         </form>
     );

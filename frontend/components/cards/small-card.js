@@ -33,13 +33,13 @@ const SmallCard = ({blog, imgWidth, imgHeight}) => {
                 </a>
             </Link>
             <div className="card-body">
-                <h5 className="card-title">
+                <h3 className="card-title">
                     <Link href={multiLink}>
                         <a>
                             {blog.title.toLowerCase()}
                         </a>
                     </Link>
-                </h5>
+                </h3>
                 <div className="card-text"> {parse(blog.excerpt)}</div>
                 {blog && <div className={classes.Info}>
                     Posted on {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}

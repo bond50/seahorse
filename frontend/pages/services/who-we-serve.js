@@ -15,7 +15,7 @@ const Slug = () => {
 
     const head = () => (
         <Head>
-            <title>Services| {APP_NAME}</title>
+            <title>Who we serve| {APP_NAME}</title>
             <meta
                 name="description"
                 content={`${APP_NAME} offer services that fall into commercial ,retail and solar power generation`}
@@ -23,7 +23,7 @@ const Slug = () => {
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
-            <meta property="og:title" content={`Our Services | ${APP_NAME}`}/>
+            <meta property="og:title" content={`Who we serve | ${APP_NAME}`}/>
             <meta
                 property="og:description"
                 content={`${APP_NAME} offer services that fall into commercial ,retail and solar power generation`}
@@ -53,13 +53,12 @@ const Slug = () => {
             {head()}
             <Layout
                 breadcrumb
-                breadcrumbHeader2={`Products and services`}
-                   alt={`${APP_NAME } | Products and services `}
+                breadcrumbHeader2={`Who we serve`}
+                alt={`${APP_NAME} | Who we serve `}
                 breadImg={`/img/service/windmill.jpg`}
             >
-                <Services className='section-bg'/>
-                {/*<FinancialInformation/>*/}
-                <WhoWeServe/>
+
+                <WhoWeServe single={true}/>
             </Layout>
         </>
 

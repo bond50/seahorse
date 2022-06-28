@@ -7,7 +7,7 @@ import Breadcrumbs from "../components/reusables/Breadcrumbs";
 import ScrollTop from "../components/ScrollTop";
 import Top from "../components/navigation/top";
 
-const Layout = ({children, hero, breadcrumb, breadcrumbHeader2, header2Class, breadImg}) => {
+const Layout = ({children, hero, breadcrumb, breadcrumbHeader2, header2Class,alt, breadImg}) => {
     let bg = false
     if (breadcrumb) {
         bg = true
@@ -20,7 +20,7 @@ const Layout = ({children, hero, breadcrumb, breadcrumbHeader2, header2Class, br
             {hero && <HomeHero/>}
             <main id="main">
                 {breadcrumb &&
-                <Breadcrumbs header2={breadcrumbHeader2} imgPackage={breadImg} header2Class={header2Class}/>}
+                <Breadcrumbs header2={breadcrumbHeader2} imgPackage={breadImg} header2Class={header2Class} alt={alt}/>}
                 {children}
             </main>
             <Footer/>

@@ -49,6 +49,7 @@ const Index = () => {
               <Layout
             breadcrumb
             breadcrumbHeader2={`Contact us`}
+            alt={`${APP_NAME } |contact us`}
             breadImg={`/img/contact/contact1.jpg`}
         >
             <Contact/>

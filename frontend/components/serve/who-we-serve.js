@@ -3,7 +3,7 @@ import classes from '../../styles/serve.module.css'
 import {Icon} from '@iconify/react';
 import {YearsOperated} from "../years-operated/YearsOperated";
 
-const WhoWeServe = () => {
+const WhoWeServe = ({single}) => {
     const list = [
         {text: "Manufacturing", icon: 'material-symbols:precision-manufacturing', color: '#42a4d2'},
         {text: "Healthcare", icon: 'iconoir:healthcare', color: '#ff5828'},
@@ -23,7 +23,7 @@ const WhoWeServe = () => {
                 <div className="row justify-content-center">
 
                     <div className="col-lg-6 ">
-                        <h3 className='text-center'>Who we serve</h3>
+                        {!single && <h3 className='text-center'>Who we serve</h3>}
                         <p className={classes.para}>The company has been in business for <YearsOperated/> years now and
                             clients include those in the:</p>
                         <div className="row gy-4 mx-3">

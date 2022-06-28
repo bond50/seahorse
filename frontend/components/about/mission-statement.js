@@ -1,12 +1,13 @@
 import React from 'react';
 import Container1 from "../reusables/r-componens/container-1";
 
-const MissionStatement = () => {
+const MissionStatement = ({ifSingle}) => {
     return (
         <Container1
             imgPackage={`/img/seahorse/pexels-spacex-586117.jpg`}
             height={540}
             width={960}
+            single={ifSingle}
             alt={`Mission statement | Seahorse Energy LTD`}
             title={`Mission statement `}
             className='section-bg mission-vision '

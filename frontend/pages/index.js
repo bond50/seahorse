@@ -52,13 +52,11 @@ const Index = () => {
                 <WhyUs/>
                 <Cta2/>
                 <About/>
-
                 <Services/>
                 <Supply/>
-                 <MissionVision/>
+                <MissionVision/>
                 <Commitment/>
                 <RecentBlogs/>
-
 
             </Layout>
         </>

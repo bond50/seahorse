@@ -14,28 +14,28 @@ import {useRouter} from "next/router";
 import Objective from "../../components/about/objective";
 
 
-const Index = () => {
+const Value= () => {
 
 
     const router = useRouter()
 
     const head = () => (
         <Head>
-            <title>About | {APP_NAME}</title>
+            <title>Values | {APP_NAME}</title>
             <meta
                 name="description"
-                content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
+                content={`At SeaHorse Energy Ltd. we are driven and guided by our shared commitment and values. `}
             />
             <meta name="keywords"
-                  content="seahorse energy ltd, seahorsenergy.com,,history, vision, mission"/>
+                  content="seahorse energy ltd, seahorsenergy.com,values, core-values ,our values, our core values"/>
 
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
-            <meta property="og:title" content={`About | ${APP_NAME}`}/>
+            <meta property="og:title" content={`Values | ${APP_NAME}`}/>
             <meta
                 property="og:description"
-                content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
+                content={`At SeaHorse Energy Ltd. we are driven and guided by our shared commitment and values. `}
             />
 
             <meta property="og:type" content="webiste"/>
@@ -61,22 +61,14 @@ const Index = () => {
             {head()}
             <Layout
                 breadcrumb
-                breadcrumbHeader2={`About`}
-                alt={`${APP_NAME} | About us`}
+                breadcrumbHeader2={`Our Values`}
+                alt={`${APP_NAME} | Values`}
                 breadImg={`/img/about/about1.jpg`}
             >
-
-                <History/>
-                <MissionStatement/>
-                <Purpose/>
-                <Culture/>
-                <Values/>
-                <Vision/>
-                <Policy/>
-                <Objective/>
+                <Values ifSingle={true}/>
             </Layout>
         </Fragment>
     );
 };
 
-export default Index;
+export default Value;

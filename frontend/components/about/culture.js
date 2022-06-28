@@ -1,8 +1,7 @@
 import React from 'react';
-import Container2 from "../reusables/r-componens/container-2";
 import Container1 from "../reusables/r-componens/container-1";
 
-const Culture = () => {
+const Culture = ({ifSingle}) => {
     return (
         <Container1
             imgPackage={`/img/seahorse/pexels-spacex-586117.jpg`}
@@ -11,6 +10,7 @@ const Culture = () => {
             alt={`Culture | Seahorse Energy LTD`}
             title={`Our culture `}
             className='section-bg culture '
+            single={ifSingle}
 
         >
             <p>

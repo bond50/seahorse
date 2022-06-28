@@ -105,6 +105,7 @@ const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
             {head()}
             <Layout
                 breadcrumb
+                alt={`Our blog`}
                 breadcrumbHeader2={`Our blog`}
                 breadImg={`/img/blog/blog1.jpg`}
             >

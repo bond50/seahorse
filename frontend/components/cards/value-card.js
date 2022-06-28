@@ -14,7 +14,7 @@ const ValueCard = ({paragraph, title, src}) => {
                 </div>
                 <div className="col-xl-7 d-flex align-items-center">
                     <div className="card-body">
-                        <h4 className="card-title">{title}</h4>
+                        <h3 className="card-title">{title}</h3>
                         <p>{paragraph}</p>
                     </div>
                 </div>

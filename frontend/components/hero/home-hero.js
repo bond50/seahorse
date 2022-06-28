@@ -1,9 +1,17 @@
 import React from 'react';
 import Link from "next/link";
+import Image from "next/image";
 
 const HomeHero = () => {
     return (
         <section className="hero d-flex align-items-center">
+            <Image
+                src={'/img/hero/hero.jpg'}
+                layout='fill'
+                className='image'
+                objectFit='cover'
+                alt='Seahorse Energy LTD hero image'
+                objectPosition='center'/>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-4">
@@ -16,7 +24,7 @@ const HomeHero = () => {
                                 <a className="custom-btn">About us </a>
                             </Link>
                             <Link href={`/contact`}>
-                                <a className="custom-btn contact mx-2">Send us a message</a>
+                                <a className="custom-btn contact mx-2">Contact</a>
                             </Link>
                         </div>
                     </div>

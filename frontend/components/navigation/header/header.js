@@ -5,7 +5,7 @@ import useToggle from "../../../hooks/useToggle";
 import Navbar from "./navbar";
 import Top from "../top";
 
-const Header = ({noBg}) => {
+const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -20,17 +20,6 @@ const Header = ({noBg}) => {
     if (scrolled) {
         navbarClasses.push('fixed-top ')
     }
-    // if (noBg){
-    //       navbarClasses.push('fixed-top')
-    // }
-    // if (noBg && scrolled) {
-    //     navbarClasses.push('sticker')
-    // }
-    //
-    // if (noBg && !scrolled) {
-    //     navbarClasses.push('transparent')
-    // }
-
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
@@ -42,7 +31,7 @@ const Header = ({noBg}) => {
 
     return (
         <div className={closed ? `mobile-nav-active` : ''}>
-            <header id="header" className={navbarClasses.join(' ')}>
+            <header id="header" className={navbarClasses.join(' ')} >
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
                     <Link href="/">
                         <a className="logo d-flex align-items-center">

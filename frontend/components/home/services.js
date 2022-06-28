@@ -5,11 +5,12 @@ import {fetcher} from "../axios/axios";
 import {trim} from "../reusables/functions/trim";
 import renderHTML from "html-react-parser";
 import {API} from "../../config";
+import Preloader from "../preloader";
 
 const Services = ({className}) => {
     const {data, error} = useSWR({url: `/services`, method: 'get'}, fetcher);
     if (error) return <div>failed to load</div>
-    if (!data) return <div id='preloader'/>
+    if (!data) return <Preloader/>
 
 
     return (
@@ -32,7 +33,7 @@ const Services = ({className}) => {
                             imgAlt={'commercial'}
                             key={service._id}
                         >
-                             {renderHTML(service.excerpt)}
+                            {renderHTML(service.excerpt)}
                         </ServiceCard>
 
                     ))}

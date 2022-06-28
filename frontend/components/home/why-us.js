@@ -7,8 +7,9 @@ const WhyUs = () => {
             imgPackage={`/img/about/about1.jpg`}
             height={852}
             width={1280}
+            className='section-bg'
             alt={`About Seahorse Energy LTD`}
-            title={`About `}
+            title={`About`}
             id={'why-us'}
             header3={`Why we matter`} header4={` SeaHorse Energy Ltd is a solution provider`}>
             <p>Located in Mombasa, Kenya, SeaHorse Energy Ltd is a relatively young company but its dedicated staff has

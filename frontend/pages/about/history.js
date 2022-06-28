@@ -1,38 +1,31 @@
 import React, {Fragment} from 'react';
 import Layout from "../../hoc/layout";
 import History from "../../components/about/history";
-import MissionStatement from "../../components/about/mission-statement";
-import Purpose from "../../components/about/Purpose";
-import Values from "../../components/about/values";
-import Culture from "../../components/about/culture";
-import Vision from "../../components/about/vision";
-import Policy from "../../components/about/policy";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
 import {useRouter} from "next/router";
 
-import Objective from "../../components/about/objective";
 
 
-const Index = () => {
+const Hist = () => {
 
 
     const router = useRouter()
 
     const head = () => (
         <Head>
-            <title>About | {APP_NAME}</title>
+            <title>History | {APP_NAME}</title>
             <meta
                 name="description"
                 content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
             />
             <meta name="keywords"
-                  content="seahorse energy ltd, seahorsenergy.com,,history, vision, mission"/>
+                  content="seahorse energy ltd, seahorsenergy.com,history, our history"/>
 
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
-            <meta property="og:title" content={`About | ${APP_NAME}`}/>
+            <meta property="og:title" content={`History | ${APP_NAME}`}/>
             <meta
                 property="og:description"
                 content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
@@ -61,22 +54,16 @@ const Index = () => {
             {head()}
             <Layout
                 breadcrumb
-                breadcrumbHeader2={`About`}
-                alt={`${APP_NAME} | About us`}
+                breadcrumbHeader2={`History`}
+                alt={`${APP_NAME} | History`}
                 breadImg={`/img/about/about1.jpg`}
             >
 
                 <History/>
-                <MissionStatement/>
-                <Purpose/>
-                <Culture/>
-                <Values/>
-                <Vision/>
-                <Policy/>
-                <Objective/>
+
             </Layout>
         </Fragment>
     );
 };
 
-export default Index;
+export default Hist;

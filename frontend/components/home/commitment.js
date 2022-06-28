@@ -26,7 +26,7 @@ const Commitment = () => {
                         <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
                            <Icon icon="openmoji:solar-energy"  className='flex-shrink-0 icon'/>
                             <div>
-                                <h4><a href="" className="stretched-link">Solar power</a></h4>
+                                <h3><span className="stretched-link">Solar power</span></h3>
                                 <p>Create and generate solar electricity to emerging markets. Schools, Businesses
                                     and communities all around the world can benefit from Solar energy</p>
                             </div>
@@ -37,7 +37,7 @@ const Commitment = () => {
                              <Icon icon="material-symbols:wind-power-sharp"  className='flex-shrink-0 icon'/>
 
                             <div>
-                                <h4><a href="" className="stretched-link">Wind power</a></h4>
+                                <h3><span className="stretched-link">Wind power</span></h3>
                                 <p>The process by which the wind is used to generate mechanical power or
                                     electricity.
                                     Wind turbines convert the kinetic energy in the wind into mechanical power.</p>
@@ -49,7 +49,7 @@ const Commitment = () => {
                             <Icon icon="mdi:hydro-power"  className='flex-shrink-0 icon'/>
 
                             <div>
-                                <h4><a href="" className="stretched-link">Hydro-Electric power</a></h4>
+                                <h3><span  className="stretched-link">Hydro-Electric power</span></h3>
                                 <p> Form of energy that harnesses the power of water in motion—such as water flowing
                                     over a waterfall—to generate electricity</p>
                             </div>
@@ -59,7 +59,7 @@ const Commitment = () => {
                         <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
                             <Icon icon="arcticons:fuelflash"  className='flex-shrink-0 icon'/>
                             <div>
-                                <h4><a href="" className="stretched-link">Biomass fuels</a></h4>
+                                <h3><span className="stretched-link">Biomass fuels</span></h3>
                                 <p>Biomass fuels are organic materials produced in a renewable manner</p>
                             </div>
                         </div>

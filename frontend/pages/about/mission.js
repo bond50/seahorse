@@ -14,28 +14,28 @@ import {useRouter} from "next/router";
 import Objective from "../../components/about/objective";
 
 
-const Index = () => {
+const MissionS = () => {
 
 
     const router = useRouter()
 
     const head = () => (
         <Head>
-            <title>About | {APP_NAME}</title>
+            <title>Mission statement | {APP_NAME}</title>
             <meta
                 name="description"
-                content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
+                content={`At SeaHorse Energy Ltd, our mission is to be the leading sales and service in the organizational and consumer markets`}
             />
             <meta name="keywords"
-                  content="seahorse energy ltd, seahorsenergy.com,,history, vision, mission"/>
+                  content="seahorse energy ltd,seahorsenergy.com, www.seahorsenergy.com,statement,our mission, mission"/>
 
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
-            <meta property="og:title" content={`About | ${APP_NAME}`}/>
+            <meta property="og:title" content={`Mission statement | ${APP_NAME}`}/>
             <meta
                 property="og:description"
-                content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
+                content={`At SeaHorse Energy Ltd, our mission is to be the leading sales and service in the organizational and consumer markets`}
             />
 
             <meta property="og:type" content="webiste"/>
@@ -61,22 +61,15 @@ const Index = () => {
             {head()}
             <Layout
                 breadcrumb
-                breadcrumbHeader2={`About`}
-                alt={`${APP_NAME} | About us`}
+                breadcrumbHeader2={`Our Mission`}
+                alt={`${APP_NAME} | Mission`}
                 breadImg={`/img/about/about1.jpg`}
             >
+                <MissionStatement ifSingle={true}/>
 
-                <History/>
-                <MissionStatement/>
-                <Purpose/>
-                <Culture/>
-                <Values/>
-                <Vision/>
-                <Policy/>
-                <Objective/>
             </Layout>
         </Fragment>
     );
 };
 
-export default Index;
+export default MissionS;

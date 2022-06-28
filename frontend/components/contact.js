@@ -68,9 +68,16 @@ const Contact = () => {
                         <div className={`${classes.infoItem} d-flex`}>
                             <i className="bi bi-geo-alt flex-shrink-0"></i>
                             <div>
-                                <h4>Location:</h4>
+                                <h4>Location: Mombasa</h4>
                                 <p>Sea View Plaza – 2nd floor</p>
                                 <p>Margaret Avenue off Mama Ngina Drive</p>
+                            </div>
+                        </div>
+                        <div className={`${classes.infoItem} d-flex`}>
+                            <i className="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h4>Location: Nairobi</h4>
+                                <p> Westlands, woodvale Avenue</p>
                             </div>
                         </div>
 
@@ -99,7 +106,7 @@ const Contact = () => {
 
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="250">
 
-                        <form  className={classes.form} onSubmit={clickSubmit}>
+                        <form className={classes.form} onSubmit={clickSubmit}>
                             <div className="row">
                                 <div className={`col-md-6 form-group ${classes.formGroup}`}>
                                     <input

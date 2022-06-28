@@ -14,28 +14,28 @@ import {useRouter} from "next/router";
 import Objective from "../../components/about/objective";
 
 
-const Index = () => {
+const VisionStatement = () => {
 
 
     const router = useRouter()
 
     const head = () => (
         <Head>
-            <title>About | {APP_NAME}</title>
+            <title>Vision statement | {APP_NAME}</title>
             <meta
                 name="description"
-                content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
+                content={`The core vision at SeaHorse Energy Ltd is to become the leading energy partner that provides consumers with efficient energy solutions to the most difficult energy problems in the region`}
             />
             <meta name="keywords"
-                  content="seahorse energy ltd, seahorsenergy.com,,history, vision, mission"/>
+                  content="seahorse energy ltd,seahorsenergy.com, www.seahorsenergy.com,statement,our vision, vision"/>
 
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
-            <meta property="og:title" content={`About | ${APP_NAME}`}/>
+            <meta property="og:title" content={`Vision statement | ${APP_NAME}`}/>
             <meta
                 property="og:description"
-                content={`SeaHorse was founded in April 4th 018. The company has ever since been a part of the development of sustainable energy in the Oil and Gas sector. The company has extended its business network globally.`}
+                content={`The core vision at SeaHorse Energy Ltd is to become the leading energy partner that provides consumers with efficient energy solutions to the most difficult energy problems in the region`}
             />
 
             <meta property="og:type" content="webiste"/>
@@ -61,22 +61,14 @@ const Index = () => {
             {head()}
             <Layout
                 breadcrumb
-                breadcrumbHeader2={`About`}
-                alt={`${APP_NAME} | About us`}
+                breadcrumbHeader2={`Our Vision`}
+                alt={`${APP_NAME} | Vision`}
                 breadImg={`/img/about/about1.jpg`}
             >
-
-                <History/>
-                <MissionStatement/>
-                <Purpose/>
-                <Culture/>
-                <Values/>
-                <Vision/>
-                <Policy/>
-                <Objective/>
+                <Vision ifSingle={true}/>
             </Layout>
         </Fragment>
     );
 };
 
-export default Index;
+export default VisionStatement;

@@ -1,13 +1,14 @@
 import React from 'react';
 import Image from "next/image";
 
-const Container1 = ({id, title, imgPackage,className, alt,height, header3,width, header4, children}) => {
+const Container1 = ({id, title, imgPackage, className, alt, height, single, header3, width, header4, children}) => {
     return (
         <section id={id} className={`container1  ${className}`}>
             <div className="container" data-aos="fade-up">
-                <div className="section-header">
+                {!single && <div className="section-header">
                     <h2>{title}</h2>
                 </div>
+                }
                 <div className="row g-0" data-aos="fade-up" data-aos-delay="200">
                     <div className="col-xl-5 img-bg">
                         <Image

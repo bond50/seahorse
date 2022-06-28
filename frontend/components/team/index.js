@@ -32,7 +32,7 @@ const Team = () => {
                                          className="img-fluid" alt="" width={960} height={720}/>
                                 </div>
                                 <div className={classes.memberInfo}>
-                                    <h4>{member.name}</h4>
+                                    <h3>{member.name}</h3>
                                     <span>{member.role}</span>
                                 </div>
                             </div>

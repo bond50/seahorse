@@ -12,15 +12,14 @@ const Top = () => {
                         <Icon icon="emojione:envelope-with-arrow" className={classes.i}/>
                         <a href="mailto:info@seahorsenergy.com" className={classes.link}>info@seahorsenergy.com</a>
                     </div>
-                    <div className={`${classes.icon} ms-4`}>
-                        <Icon icon="carbon:phone-incoming" className={classes.i}/>
-
-                        <span>
-                            <a href="tel:+254796777444" className={classes.link}>+254 796777444 </a>
-                            |
-                            <a href="tel:+254796777333" className={classes.link}>+254 796777333</a></span>
+                    <div className={`${classes.icon} mx-2`}>
+                        <Icon icon="charm:phone-incoming" className={classes.i}/>
+                        <a href="tel:+254796777444" className={`${classes.link} `}>+254 796777444 </a>
                     </div>
-
+                    <div className={`${classes.icon} mx-2`}>
+                        <Icon icon="charm:phone-incoming" className={classes.i}/>
+                        <a href="tel:+254796777333" className={classes.link}>+254 796777333</a>
+                    </div>
                 </div>
                 <div className={`${classes.socialLinks} d-none d-md-flex align-items-center`}>
                     <Link href={`/blogs`}>
