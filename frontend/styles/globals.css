@@ -119,6 +119,7 @@ section {
     background: #fff;
     transition: all 0.5s;
     z-index: 997;
+    padding: 6px 0;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -129,7 +130,7 @@ section {
 }
 
 .header .logo img {
-    max-height: 40px;
+    max-height: 50px;
     margin-right: 6px;
     border-radius: 2px;
 }
@@ -149,11 +150,15 @@ section {
 
     .navbar li {
         position: relative;
-        border-left: 1px solid #e1e1e1;
+        /*border-left: 1px solid #e1e1e1;*/
+        text-align: center;
+        border-right: 0.15mm solid #e1e1e1;
+        border-left: .15mm solid #e1e1e1;
+        margin-right: 1px;
     }
 
     .navbar li:last-child {
-        border-right: 1px solid #e1e1e1;
+        border-right: 0.15mm solid #e1e1e1;
     }
 
     .navbar a,
@@ -161,7 +166,7 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px 30px 15px 30px;
+        padding: 10px 30px 10px 30px;
         font-family: var(--font-default);
         font-size: 15px;
         font-weight: 500;
@@ -187,7 +192,6 @@ section {
 
 
 }
-
 
 
 @media (min-width: 1280px) {
@@ -251,7 +255,6 @@ section {
     .navbar li:hover > a {
         color: #fff;
     }
-
 
 
     .mobile-nav-show {
