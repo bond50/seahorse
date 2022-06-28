@@ -171,18 +171,23 @@ section {
     }
 
 
+    .navbar a i,
+    .navbar a:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+    }
+
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover > a {
+        color: var(--color-primary);
+    }
+
 
 }
 
-@media (min-width: 1280px) and (max-width: 1366px) {
-    .navbar .dropdown .dropdown ul {
-        left: -90%;
-    }
-
-    .navbar .dropdown .dropdown:hover > ul {
-        left: -100%;
-    }
-}
 
 
 @media (min-width: 1280px) {
@@ -233,7 +238,7 @@ section {
         transition: 0.3s;
     }
 
-    .navbar a i, .dropdown-indicator, .dropdown-indicator:focus,
+    .navbar a i,
     .navbar a:focus i {
         font-size: 12px;
         line-height: 0;
@@ -246,7 +251,6 @@ section {
     .navbar li:hover > a {
         color: #fff;
     }
-
 
 
 

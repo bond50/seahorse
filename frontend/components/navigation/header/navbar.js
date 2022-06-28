@@ -15,13 +15,14 @@ const Navbar = ({scrolled, toggleClosed}) => {
         {to: '/blogs', caption: 'Blog'},
         {to: '/media', caption: 'Media center'},
         {to: '/contact', caption: 'Contact us'},
-        {to: 'https://seahorsenergy.com:2096', caption: 'Webmail'},
+
     ]
 
     return (
         <nav id="navbar" className={`navbar `}>
             <ul className={scrolled ? 'nav-scrolled' : ''}>
                 {list.map((item, i) => {
+                    console.log(router.pathname)
                     return <li key={i} onClick={toggleClosed}>
                         <Link href={`${item.to}`}>
                             <a className={router.pathname === item.to ? "active" : ""}>
@@ -30,7 +31,11 @@ const Navbar = ({scrolled, toggleClosed}) => {
                         </Link>
                     </li>;
                 })}
-
+                <li>
+                    <a href="https://seahorsenergy.com:2096">
+                        Web mail
+                    </a>
+                </li>
             </ul>
         </nav>
     );
