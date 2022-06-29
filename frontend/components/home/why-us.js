@@ -1,12 +1,12 @@
 import React from 'react';
 import Container1 from "../reusables/r-componens/container-1";
 
-const WhyUs = () => {
+const WhyUs = ({noHeader}) => {
     return (
         <Container1
             imgPackage={`/img/about/about1.jpg`}
             height={852}
-            width={1280}
+            width={1280} single={noHeader}
             className='section-bg'
             alt={`About Seahorse Energy LTD`}
             title={`About`}

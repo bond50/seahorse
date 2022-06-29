@@ -5,8 +5,9 @@ import Image from "next/image";
 const HomeHero = () => {
     return (
         <section className="hero d-flex align-items-center">
+
             <Image
-                src={'/img/hero/hero.jpg'}
+                src={`/img/hero/hero2.jpg`}
                 layout='fill'
                 className='image'
                 objectFit='cover'

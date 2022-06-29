@@ -49,7 +49,7 @@ const Index = () => {
         <>
             {head()}
             <Layout hero>
-                <WhyUs/>
+                <WhyUs noHeader/>
                 <Cta2/>
                 <About/>
                 <Services/>
