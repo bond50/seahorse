@@ -347,6 +347,22 @@ export const listHomePageBlogs = (req, res) => {
         });
 };
 
+export const listFooterBlogs = (req, res) => {
+    Blog.find({accepted: true})
+        .populate('postedBy', '_id name')
+        .select('_id title slug imgWidth postedBy imgHeight excerpt createdAt updatedAt')
+        .limit(7)
+        .sort({createdAt: -1})
+        .exec((err, data) => {
+            if (err) {
+                return res.json({
+                    error: errorHandler(err)
+                });
+            }
+            res.json(data);
+        });
+};
+
 
 
 

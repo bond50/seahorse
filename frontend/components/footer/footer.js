@@ -4,12 +4,25 @@ import useSWR from "swr";
 import {fetcher} from "../axios/axios";
 import classes from '../../styles/footer.module.css'
 import Preloader from "../preloader";
+import {Icon} from '@iconify/react';
 
 const Footer = () => {
-    const {data: blogs, error: blogErr} = useSWR({url: `/list-recent-blogs`, method: 'get'}, fetcher);
+    const {data: blogs, error: blogErr} = useSWR({url: `/list-recent-blogs-footer`, method: 'get'}, fetcher);
     const {data: services, error} = useSWR({url: `/services`, method: 'get'}, fetcher);
-    if (error) return <div>failed to load</div>
+    if (error) return <div>failed to load footer services</div>
+    if (blogErr) return <div>failed to load footer blogs</div>
     if (!services || !blogs) return <Preloader/>
+
+    const useful =[
+        {to:'/about/mission', caption:'Our Mission'},
+        {to:'/about/vision', caption:'Our Vision'},
+        {to:'/about/culture', caption:'Our culture'},
+        {to:'/about/purpose', caption:'Our Purpose'},
+        {to:'/about/values', caption:'Our Values'},
+        {to:'/blogs', caption:'Our Blog'},
+
+
+    ]
     return (
         <footer className={classes.footer}>
             <div className={classes.footerContent}>
@@ -17,15 +30,15 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
                             <div className={classes.footerInfo}>
-                                <h3>Seahorse Energy</h3>
+                                <h3>Seahorse<span> Energy LTD</span></h3>
                                 <p>
                                     <strong>Mombasa Branch</strong> <br/>
-                                    Head Office ,Sea View Plaza,2nd Floor-Magaret Avenue <br/>
-                                    Off Mama Ngina Drive, P.O.Box 89990-80100 Mombasa, Kenya<br/>
+                                    Sea View Plaza, 2<sup>nd</sup> Floor-Magaret Avenue, <br/>
+                                    Off Mama Ngina Drive, <br/> P.O. box 89990-80100 <br/> Mombasa, Kenya.<br/>
                                     <strong>Phone:</strong> +254 796777444/+254 798777333<br/> <br/>
 
                                     <strong>Nairobi Branch</strong> <br/>
-                                    Westlands,woodvale Avenue, P.O box 14505-00800 <br/>
+                                    Westlands,woodvale Avenue, Madonna house. <br/> P.O. box 14505-00800 <br/>
                                     <strong>Phone </strong>:+254 798777666 <br/><br/>
                                     <strong>Email:</strong> info@seahorsenergy.com<br/>
 
@@ -36,16 +49,12 @@ const Footer = () => {
                         <div className={`col-lg-2 col-md-6 ${classes.footerLinks}`}>
                             <h4>Useful Links</h4>
                             <ul>
-                                <li><i className="bi bi-chevron-right"/> <Link href="/"><a> Home</a></Link>
+                                {useful.map((item,i)=>{
+                                    return <li key={i}>
+                                    <Icon icon="ci:sub-right" className={classes.icon}/>
+                                    <Link href={item.to}><a> {item.caption}</a></Link>
                                 </li>
-                                <li><i className="bi bi-chevron-right"/> <Link href="/about"><a> About us</a></Link>
-                                </li>
-                                <li><i className="bi bi-chevron-right"/> <Link href="/services"><a>Products and
-                                    services</a></Link></li>
-                                <li><i className="bi bi-chevron-right"/> <Link href="/blogs"><a>Blog</a></Link>
-                                </li>
-                                <li><i className="bi bi-chevron-right"/><Link href="/contact"><a> Contact us</a></Link>
-                                </li>
+                                })}
                             </ul>
                         </div>
 
@@ -54,12 +63,17 @@ const Footer = () => {
                             <ul>
 
                                 {services && services.map(service => (
-                                    <li key={service._id}><i className="bi bi-chevron-right"/>
+                                    <li key={service._id}> <Icon icon="ci:sub-right" className={classes.icon} />
                                         <Link href={`/services/${service.slug}`}>
                                             <a>{service.title}</a>
                                         </Link>
                                     </li>
                                 ))}
+                                 <li > <Icon icon="ci:sub-right" className={classes.icon} />
+                                        <Link href={`/services/who-we-serve`}>
+                                            <a>Who we serve</a>
+                                        </Link>
+                                    </li>
 
                             </ul>
                         </div>
@@ -68,7 +82,7 @@ const Footer = () => {
                             <ul>
                                 {blogs && blogs.map(blog => (
                                     <li key={blog._id}>
-                                        <i className="bi bi-dash-lg"/>
+                                       <Icon icon="carbon:dot-mark" className={classes.icon} />
                                         <Link href={`/blogs/${blog.slug}`}>
                                             <a>{blog.title}</a>
                                         </Link>

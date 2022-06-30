@@ -78,6 +78,7 @@ const Contact = () => {
                             <div>
                                 <h4>Location: Nairobi</h4>
                                 <p> Westlands, woodvale Avenue</p>
+                                <p>Madonna House</p>
                             </div>
                         </div>
 

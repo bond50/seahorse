@@ -300,11 +300,12 @@ section {
 
 .hero {
     width: 100%;
-    min-height:80vh;
+    min-height: 80vh;
     background-size: cover;
     position: relative;
     padding: 120px 0;
     z-index: 1;
+
 
 }
 
@@ -316,29 +317,21 @@ section {
     z-index: 2;
 }
 
-@media (min-width: 1034px) {
-    .hero:after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        background: rgba(0,  0, 0, 0.4);
-        /* background-color:  rgba(16,61,103,0.6);*/
-        top: 0;
-        bottom: 0;
-    }
+
+.hero:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+
+    top: 0;
+    bottom: 0;
 }
 
-/*.hero:before {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    background: rgba(255, 255, 255, 0.3);*/
-/*    inset: 0;*/
-/*    z-index: 1;*/
-/*}*/
 
 @media (max-width: 1034px) {
     .hero:before {
-        background: rgba(27, 47, 69, 0.7);
+         background-color:  rgba(16,61,103,0.6);
     }
 }
 
@@ -373,12 +366,12 @@ section {
 .hero .custom-btn {
     font-family: var(--font-secondary);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 12px 30px;
-
     transition: 0.5s;
+    border-radius: 10px;
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
     background: var(--color-white);
@@ -391,25 +384,12 @@ section {
     border: 1px solid var(--color-white);
 }
 
-.hero .custom-btn.contact {
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-radius: 5px;
-    border: 1px solid var(--color-white);
-}
-
-.hero .custom-btn.contact:hover {
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    background: var(--color-white)
-}
 
 @media (max-width: 640px) {
     .hero h2 {
         font-size: 36px;
         line-height: 1;
     }
-
     .custom-btn {
         font-size: 13px;
     }

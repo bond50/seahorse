@@ -28,7 +28,7 @@ const Layout = ({children, hero, breadcrumb, breadcrumbHeader2, header2Class, al
                 {breadcrumb &&
                 <Breadcrumbs header2={breadcrumbHeader2} imgPackage={breadImg} header2Class={header2Class} alt={alt}/>}
                 <ScrollDown clicked={goToSection}/>
-                <div ref={section} className='test'/>
+                <div ref={section} />
                 {children}
 
             </main>

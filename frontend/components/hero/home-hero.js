@@ -28,6 +28,7 @@ const HomeHero = () => {
                                 <a className="custom-btn contact mx-2">Contact</a>
                             </Link>
                         </div>
+
                     </div>
                 </div>
             </div>

@@ -31,11 +31,11 @@ const Navbar = ({scrolled, toggleClosed}) => {
                         </Link>
                     </li>;
                 })}
-                <li>
-                    <a href="https://seahorsenergy.com:2096">
-                        Web mail
-                    </a>
-                </li>
+                {/*<li>*/}
+                {/*    <a href="https://seahorsenergy.com:2096">*/}
+                {/*        Web mail*/}
+                {/*    </a>*/}
+                {/*</li>*/}
             </ul>
         </nav>
     );

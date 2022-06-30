@@ -11,7 +11,7 @@ import {
     update,
     photo,
     listRelated,
-    listSearch,
+    listSearch, listFooterBlogs,
 } from '../controllers/blog.js'
 
 import {requireSignin, adminMiddleware} from '../controllers/auth.js'
@@ -19,6 +19,7 @@ import {requireSignin, adminMiddleware} from '../controllers/auth.js'
 router.post('/blog', requireSignin, adminMiddleware, create);
 router.get('/blogs', list);
 router.get('/list-recent-blogs', listHomePageBlogs);
+router.get('/list-recent-blogs-footer', listFooterBlogs);
 router.post('/blogs-categories-tags', listAllBlogsCategoriesTags);
 router.get('/blog/:slug', read);
 router.delete('/blog/:slug', requireSignin, adminMiddleware, remove);
