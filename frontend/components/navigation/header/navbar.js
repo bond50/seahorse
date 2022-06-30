@@ -22,7 +22,6 @@ const Navbar = ({scrolled, toggleClosed}) => {
         <nav id="navbar" className={`navbar `}>
             <ul className={scrolled ? 'nav-scrolled' : ''}>
                 {list.map((item, i) => {
-                    console.log(router.pathname)
                     return <li key={i} onClick={toggleClosed}>
                         <Link href={`${item.to}`}>
                             <a className={router.pathname === item.to ? "active" : ""}>
