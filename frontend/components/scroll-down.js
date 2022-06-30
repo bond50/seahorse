@@ -7,7 +7,7 @@ const ScrollDown = ({clicked}) => {
     return (
         <div className='container'>
             <div className={classes.scrollBtm} onClick={clicked}>
-                <Icon icon="bi:arrow-down-short" className={classes.icon} />
+                <Icon icon="bi:arrow-down" className={classes.icon} />
             </div>
         </div>
     );

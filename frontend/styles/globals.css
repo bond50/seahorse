@@ -131,7 +131,7 @@ section {
 }
 
 .header .logo img {
-    max-height: 40px;
+    max-height: 45px;
 
 }
 
@@ -445,7 +445,7 @@ section {
 
 @media (max-width: 575px) {
     .container1 .info {
-        margin: 40px 40px 20px 40px;
+        margin: 20px 8px 10px 8px;
     }
 }
 
