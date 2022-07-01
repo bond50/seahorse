@@ -15,7 +15,6 @@
 .breadcrumbs:before {
     z-index: 1;
     content: "";
-
    background-color:  rgba(16,61,103,0.73);
    /* background: linear-gradient(rgba(16,61,103,0.6),rgba(16,61,103,1));*/
     position: absolute;
@@ -29,6 +28,10 @@
     color: #fff;
     font-family: var(--font-secondary);
 }
+.breadcrumbs h2:first-letter {
+    text-transform: uppercase;
+}
+
 
 .breadcrumbs ol {
     z-index: 1;

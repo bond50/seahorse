@@ -7,11 +7,13 @@ import {API, APP_NAME, DOMAIN} from "../../config";
 import Image from "next/image";
 import Link from "next/link";
 import renderHTML from "html-react-parser";
+import {useRouter} from "next/router";
 import {trim} from "../../components/reusables/functions/trim";
 
 
 const Slug = ({service, query}) => {
     const [related, setRelated] = useState([])
+    const router = useRouter()
 
     const loadRelated = () => {
         listRelated({service}).then(data => {
@@ -52,18 +54,18 @@ const Slug = ({service, query}) => {
                 breadcrumb
                 breadcrumbHeader2={service.title}
                 alt={service.title}
-                 breadImg={`/img/service/windmill.jpg`}
+                breadImg={`/img/service/windmill.jpg`}
             >
                 <section className={classes.Detail}>
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
-
                         <div className="row gy-4">
 
                             <div className="col-lg-4">
                                 <div className={classes.ServiceList}>
                                     {related.map(s => {
+                                        console.log(`/services/${s.slug}`)
                                         return <Link href={`/services/${s.slug}`} key={s._id}>
-                                            <a>{s.title}</a>
+                                            <a className={router.asPath === `/services/${s.slug}` ? classes.active : null}>{s.title}</a>
                                         </Link>
                                     })}
                                 </div>
@@ -75,7 +77,7 @@ const Slug = ({service, query}) => {
                             <div className={`col-lg-8`}>
                                 <Image
                                     src={`${API}/service/photo/${service.slug}`}
-                                   width={1280}
+                                    width={1280}
                                     height={854}
 
                                     alt={`service.title ${APP_NAME}`} className={`img-fluid  ${classes.Img}`}/>
