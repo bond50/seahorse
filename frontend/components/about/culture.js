@@ -4,7 +4,7 @@ import Container1 from "../reusables/r-componens/container-1";
 const Culture = ({ifSingle}) => {
     return (
         <Container1
-            imgPackage={`/img/seahorse/pexels-spacex-586117.jpg`}
+            imgPackage={`/img/about/passion.jpg`}
             height={540}
             width={960}
             alt={`Culture | Seahorse Energy LTD`}

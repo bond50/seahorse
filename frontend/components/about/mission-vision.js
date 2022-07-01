@@ -6,13 +6,13 @@ const MissionVision = ({ifSingle}) => {
         {
             title: 'Mission',
             delay: '100',
-            src: '/img/seahorse/istockphoto-1344274645-612x612.jpg',
+            src: '/img/about/mission.jpg',
             para: 'To build a strong clientele-base by providing exceptional customer service and care as we pursue business through innovation and advanced technology'
         },
         {
             title: 'Vision',
             delay: '200',
-            src: '/img/seahorse/istockphoto-1254825733-170667a.jpg',
+            src: '/img/about/vision.jpg',
             para: 'To be stakeholders in provision and sustainable supply of quality products that exceeds customer expectations.'
         },
 

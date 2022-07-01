@@ -8,7 +8,7 @@ const Purpose = ({ifSingle}) => {
             title={'Purpose'}
             alt={'Purpose'}
             single={ifSingle}
-            imgPackage={'/img/seahorse/istockphoto-1254825733-170667a.jpg'}
+            imgPackage={'/img/about/do.jpg'}
             height={720} width={1280}>
             <h3 className={classes.Header}>Promoting Planetary Health</h3>
             <p  className={classes.para}>We remain committed to our traditional mission of creating clean and renewable energy like Solar, Power,

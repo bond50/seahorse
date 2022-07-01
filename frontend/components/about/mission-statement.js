@@ -4,7 +4,7 @@ import Container1 from "../reusables/r-componens/container-1";
 const MissionStatement = ({ifSingle}) => {
     return (
         <Container1
-            imgPackage={`/img/seahorse/pexels-spacex-586117.jpg`}
+            imgPackage={`/img/about/mission.jpg`}
             height={540}
             width={960}
             single={ifSingle}

@@ -4,7 +4,7 @@ import Container1 from "../reusables/r-componens/container-1";
 const Vision = ({ifSingle}) => {
     return (
         <Container1
-            imgPackage={`https://images.pexels.com/photos/221538/pexels-photo-221538.jpeg?cs=srgb&dl=pexels-pixabay-221538.jpg&fm=jpg`}
+            imgPackage={`/img/about/vision.jpg`}
             height={540}
             width={960}
             single={ifSingle}
