@@ -52,11 +52,11 @@ const Index = () => {
                 <WhyUs noHeader/>
                 <Cta2/>
                 <About/>
-                {/*<Services/>*/}
+                <Services/>
                 <Supply/>
                 <MissionVision/>
                 <Commitment/>
-                {/*<RecentBlogs/>*/}
+                <RecentBlogs/>
 
             </Layout>
         </>

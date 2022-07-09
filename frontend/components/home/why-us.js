@@ -17,7 +17,8 @@ const WhyUs = ({noHeader}) => {
                 is a privately-owned company that serves its consumers in the Oil and Gas industry with leading-edge
                 energy engineering analysis, trading and distributing of petroleum product across East and Central
                 Africa regions. We are committed to providing excellent customer service to our clients as an efficient
-                energy partner. </p>
+                energy partner.
+            </p>
             <p>SeaHorse Energy Ltd is registered privately and incorporated under the Companies Act of 2015 Cap 486 of
                 the Kenyan laws. We are a self-reliant energy company licensed to import, export and sale of petroleum
                 products. We are licensed by the Energy and Petroleum Regulatory Authority and are committed to provide

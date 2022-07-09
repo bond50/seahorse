@@ -30,7 +30,6 @@ const Layout = ({children, hero, breadcrumb, breadcrumbHeader2, header2Class, al
                 <ScrollDown clicked={goToSection}/>
                 <div ref={section} />
                 {children}
-
             </main>
             <Footer/>
             <ScrollTop/>

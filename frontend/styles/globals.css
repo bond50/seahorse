@@ -396,10 +396,6 @@ section {
     }
 }
 
-.container1 img {
-    min-height: 500px;
-    background-size: cover;
-}
 
 .mission-vision img {
     min-height: 350px;
@@ -409,10 +405,12 @@ section {
     min-height: 150px;
 }
 
-/* .container1 p {*/
-/*     font-family: "Helvetica Neue", serif;*/
-/*     color: black;*/
-/*}*/
+.container1 img {
+    min-height: 500px;
+    background-size: cover;
+}
+
+
 
 
 .container1 h3 {
