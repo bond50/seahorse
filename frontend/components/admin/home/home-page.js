@@ -1,4 +1,3 @@
-
 import ApprovedPosts from "./approved-posts";
 import ApprovedPages from "./approved-pages";
 import {isAuth} from "../../../actions/auth";

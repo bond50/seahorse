@@ -6,7 +6,6 @@ import {APP_NAME, DOMAIN} from "../../config";
 import {useRouter} from "next/router";
 
 
-
 const Hist = () => {
 
 

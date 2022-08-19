@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "../../styles/login.module.css";
-import Image from "../reusables/lazy/Image";
+
 const AuthWrapper = ({login, children, password, register,signupLabel}) => {
     return (
             <section

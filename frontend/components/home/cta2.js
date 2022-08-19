@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import classes from '../../styles/cta1.module.css'
+
 const Cta2 = () => {
     return (
         <section className={classes.cta}>

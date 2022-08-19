@@ -4,7 +4,6 @@ import styles from '../styles/srollTop.module.css'
 const ScrollTop = () => {
     const [visible, setVisible] = useState(false);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     function scrollToTop() {
         window.scrollTo({
             top: 0,

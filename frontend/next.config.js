@@ -8,6 +8,7 @@ const nextConfig = {
         PRODUCTION: false,
         DOMAIN_DEVELOPMENT: `http://localhost:3000`,
         DOMAIN_PRODUCTION: "seahorsenergy.com",
+        SITE: "https://seahorsenergy.com",
     },
     images: {
         domains: [

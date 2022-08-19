@@ -1,16 +1,16 @@
 import dynamic from "next/dynamic";
 import 'react-quill/dist/quill.snow.css';
 import {QuillFormats, QuillModules} from '/..../../helpers/quill';
-const ReactQuill = dynamic(() => import('react-quill'), {ssr: false});
 import SideCatTags from "../reusables/forms/side-cat-tags";
 import {dataFromLocalStorage, setDataToLocalStorage} from "../reusables/functions/dataFromLocalStorage";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Alert from "../messages/Alert";
-import {useEffect, useState} from "react";
 import useSWR from "swr";
-import axiosInstance, {fetcher} from "../axios/axios";
+import {fetcher} from "../axios/axios";
 import {createService} from "../../actions/service";
 import {getCookie} from "../../actions/auth";
+
+const ReactQuill = dynamic(() => import('react-quill'), {ssr: false});
 
 const token = getCookie('token');
 
@@ -27,8 +27,8 @@ const PageCreate = () => {
         hidePublishButton: false
     });
 
-    const {data: categories, error: catError, mutate} = useSWR({url: `/service-categories`, method: 'get'}, fetcher);
-    const {error, sizeError, success, formData, title, loading} = values;
+    const {data: categories} = useSWR({url: `/service-categories`, method: 'get'}, fetcher);
+    const {error, success, formData, title} = values;
 
 
     useEffect(() => {

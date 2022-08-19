@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import renderHTML from "html-react-parser";
 import {useRouter} from "next/router";
-import {trim} from "../../components/reusables/functions/trim";
 
 
 const Slug = ({service, query}) => {

@@ -6,7 +6,6 @@ import SmallCard from "../../components/cards/small-card";
 import Layout from "../../hoc/layout";
 import Card from "../../components/cards/Card";
 import BlogSideBarContent from "../../components/sidebar/sidebar-content";
-import styles from '../../styles/SingleBlog.module.css'
 
 
 const SingleBlog = ({blog, query}) => {

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import SideCatTags from "../reusables/forms/side-cat-tags";
 import Image from "next/image";
@@ -32,7 +31,7 @@ const Page = () => {
         loading: false
     });
 
-    const {error, success, loading, icon, formData, title} = values;
+    const {error, success, loading,formData, title} = values;
     const token = getCookie('token');
     const router = useRouter()
 

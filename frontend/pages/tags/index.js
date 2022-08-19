@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../../hoc/layout";
 
 
-
 const Index = () => {
     return (
          <Layout

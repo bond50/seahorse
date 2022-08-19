@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import SideCatTags from "../reusables/forms/side-cat-tags";
 import Image from "next/image";
 import {API} from "../../config";
-import  {useRouter} from "next/router";
+import {useRouter} from "next/router";
 import {getCookie} from "../../actions/auth";
 import {singleBlog, updateBlog} from "../../actions/blog";
 import {getCategories} from "../../actions/category";
@@ -11,9 +10,9 @@ import {getTags} from "../../actions/tag";
 import dynamic from "next/dynamic";
 import 'react-quill/dist/quill.snow.css';
 import {QuillFormats, QuillModules} from '/..../../helpers/quill';
+import Alert from "../messages/Alert";
 
 const ReactQuill = dynamic(() => import('react-quill'), {ssr: false});
-import Alert from "../messages/Alert";
 
 const BlogUpdate = () => {
     const [body, setBody] = useState('');

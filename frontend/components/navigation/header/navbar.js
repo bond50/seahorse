@@ -1,8 +1,6 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Link from "next/link";
 import {useRouter} from "next/router";
-import About from "./About";
-import Services from "./Services";
 
 
 const Navbar = ({scrolled, toggleClosed}) => {
@@ -30,11 +28,6 @@ const Navbar = ({scrolled, toggleClosed}) => {
                         </Link>
                     </li>;
                 })}
-                {/*<li>*/}
-                {/*    <a href="https://seahorsenergy.com:2096">*/}
-                {/*        Web mail*/}
-                {/*    </a>*/}
-                {/*</li>*/}
             </ul>
         </nav>
     );

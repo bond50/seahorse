@@ -1,17 +1,9 @@
 import React, {Fragment} from 'react';
 import Layout from "../../hoc/layout";
-import History from "../../components/about/history";
-import MissionStatement from "../../components/about/mission-statement";
-import Purpose from "../../components/about/Purpose";
 import Values from "../../components/about/values";
-import Culture from "../../components/about/culture";
-import Vision from "../../components/about/vision";
-import Policy from "../../components/about/policy";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
 import {useRouter} from "next/router";
-
-import Objective from "../../components/about/objective";
 
 
 const Value= () => {

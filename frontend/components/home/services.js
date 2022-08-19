@@ -2,7 +2,6 @@ import React from 'react';
 import ServiceCard from "../cards/service card";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
-import {trim} from "../reusables/functions/trim";
 import renderHTML from "html-react-parser";
 import {API} from "../../config";
 import Preloader from "../preloader";
@@ -27,7 +26,7 @@ const Services = ({className}) => {
                     {data && data.map((service, i) => (
                         <ServiceCard
                             title={service.title}
-                            delay={`${i + 100}`}
+                            delay={`${i * 100}`}
                             href={`/services/${service.slug}`}
                             imgSrc={`${API}/service/photo/${service.slug}`}
                             imgAlt={'commercial'}
@@ -39,7 +38,6 @@ const Services = ({className}) => {
                     ))}
 
                 </div>
-
             </div>
         </section>
     );

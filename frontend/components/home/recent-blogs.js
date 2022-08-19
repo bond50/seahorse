@@ -12,6 +12,7 @@ import Preloader from "../preloader";
 
 
 const RecentBlogs = () => {
+
     const {data: blogs, error} = useSWR({url: `/list-recent-blogs`, method: 'get'}, fetcher);
     if (error) return <div>failed to load recent blogs</div>
     if (!blogs) return <Preloader/>

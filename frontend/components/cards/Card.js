@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, {Fragment} from "react";
+import React from "react";
 import renderHTML from 'html-react-parser';
 import dayjs from 'dayjs';
 import {API} from '../../config';
@@ -7,7 +7,7 @@ import classes from '../../styles/BlogCard.module.css'
 import Image from "next/image";
 
 
-const Card = ({blog, single}) => {
+const Card = ({blog}) => {
     const showBlogTags = () =>
         blog.tags.map((t, i) => {
             let tagsLink = `/tags/${t.slug}`

@@ -17,13 +17,13 @@ const Index = () => {
     const router = useRouter()
     const head = () => (
         <Head>
-            <title>{APP_NAME} </title>
+            <title>Seahorse Energy Limited</title>
             <meta
                 name="description"
                 content={`${APP_NAME} is a privately registered and incorporated Company in Kenya under the Companies Act, 2015 Cap 486 of the Laws of Kenya.`}
             />
             <meta name="keywords"
-                  content="seahorse energy ltd , seahorsenergy.com "/>
+                  content="seahorse energy ltd , seahorsenergy.com,seahorse,seahorse energy"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
             <meta name="robots" content="max-image-preview:large"/>

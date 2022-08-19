@@ -2,10 +2,11 @@ import useCreate from "../../hooks/useCreate";
 import dynamic from "next/dynamic";
 import 'react-quill/dist/quill.snow.css';
 import {QuillFormats, QuillModules} from '/..../../helpers/quill';
-const ReactQuill = dynamic(() => import('react-quill'), {ssr: false});
 import SideCatTags from "../reusables/forms/side-cat-tags";
 import React from "react";
 import Alert from "../messages/Alert";
+
+const ReactQuill = dynamic(() => import('react-quill'), {ssr: false});
 
 
 const CreateBlog = () => {

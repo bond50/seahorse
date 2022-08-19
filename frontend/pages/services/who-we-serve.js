@@ -1,9 +1,6 @@
 import React from 'react';
 import Layout from "../../hoc/layout";
-import classes from '../../styles/serviceDetail.module.css'
 import Head from "next/head";
-import Services from "../../components/home/services";
-import FinancialInformation from "../../components/finacial/financial-information";
 import {useRouter} from "next/router";
 import {APP_NAME, DOMAIN} from "../../config";
 import WhoWeServe from "../../components/serve/who-we-serve";
