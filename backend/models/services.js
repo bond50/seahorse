@@ -42,6 +42,7 @@ const serviceSchema = new mongoose.Schema(
         metaDesc: {
             type: String
         },
+        
         photo: {
             data: Buffer,
             contentType: String
