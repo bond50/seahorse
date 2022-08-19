@@ -38,8 +38,7 @@ const Index = () => {
             <meta property="og:type" content="webiste"/>
             <meta property="og:url" content={`${DOMAIN}${router.pathname}`}/>
             <meta property="og:site_name" content={`${APP_NAME}`}/>
-
-
+            <meta name="google-site-verification" content="vUIxc3xTl9zo_bbNfv1CdR1ZZMyiyUP8HtKxtrNogZQ"/>
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}
         </Head>
     );
