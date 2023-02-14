@@ -267,7 +267,7 @@ export const list = (req, res) => {
 }
 
 
-exports.safTest = async (req, res) => {
+export const safTest = async (req, res) => {
 
     console.log(req.body)
 
