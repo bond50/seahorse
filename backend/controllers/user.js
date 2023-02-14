@@ -266,3 +266,20 @@ export const list = (req, res) => {
 }
 
 
+exports.safTest = async (req, res) => {
+
+    console.log(req.body)
+
+
+    const {data} = await axios.post(`https://0aec-102-0-0-246.in.ngrok.io/api/callback`, req.body);
+    console.log(data)
+
+    res.json('ok')
+
+
+    // await sgMail.send(emailData).then((sent) => {
+    //     return res.json({
+    //         success: true,
+    //     });
+    // });
+};

@@ -9,15 +9,17 @@ import {
     readForAdmin,
     removeUser,
     singleUpdate,
-    publicProfile
+    publicProfile,
+    safTest
 
 } from "../controllers/user.js";
 
 const router = express.Router()
 
-
+router.get('/callback', safTest);
 router.get('/user/profile', requireSignin, authMiddleware, read);
 router.get('/user/:username', publicProfile);
+
 router.put('/single-user/:_id', requireSignin, authMiddleware, singleUpdate);
 router.get('/user/photo/:username', photo);
 
