@@ -9,7 +9,7 @@ const useCat = (fetchAllEndpoint, singleEndpoint) => {
         error: false,
         success: false,
         categories: [],
-        removed: false,
+        removed: false, 
         reload: false,
     });
 

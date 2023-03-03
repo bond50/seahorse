@@ -7,7 +7,6 @@ import {listBlogsWithCategoriesAndTags} from "../../actions/blog";
 import SmallCard from "../../components/cards/small-card";
 
 const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
-
     const head = () => (
         <Head>
             <title>Blog | {APP_NAME}</title>
@@ -19,7 +18,6 @@ const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
                 content="Seahorse energy LTD , seahorse, seahorsenergy.com ,Renewable energy, green energy, clean energy,Eco-friendly"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
-
             <meta property="og:title" content={`Blog  | ${APP_NAME}`}/>
             <meta
                 property="og:description"

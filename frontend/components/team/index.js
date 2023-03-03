@@ -7,9 +7,8 @@ const Team = () => {
         {name: 'Franklin Soita', src: '', delay: '100', role: 'Technical/ Operations Officer'},
         {name: 'Ryan Mutembei ', src: '', delay: '200', role: 'Member of the Board of Directors at SeaHorse Energy'},
         {name: 'Margaret Munga', src: '', delay: '300', role: 'Marketing Officer at SeaHorse Energy'},
-        {name: 'Reagan Kitoi', src: '', delay: '400', role: 'Engineering Specialist '},
+        {name: 'Reagan Kitoi', src: '', delay: '400', role: 'Engineering Specialist'},
         {name: 'Regina Nduku', src: '', delay: '500', role: 'Procurement Officer'},
-
     ]
     return (
         <section>
@@ -17,7 +16,6 @@ const Team = () => {
                 <div className="section-header">
                     <h2>Our Team</h2>
                 </div>
-
                 <div className="row gy-4">
                     {members.map((member, i) => {
                         return <div
