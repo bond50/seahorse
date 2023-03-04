@@ -9,7 +9,7 @@ import SmallCard from "../../components/cards/small-card";
 const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
     const head = () => (
         <Head>
-            <title>Blog | {APP_NAME}</title>
+            <title>Blog</title>
             <meta
                 name="description"
                 content="Seahorse energy LTD latest articles on Demystifying Myths and Misconceptions Surrounding Renewable Energy ,Top 6 Renewable Energy Trends in 2022,If Renewable Energy Taking Over As The Best Energy Solution,  "/>
@@ -126,6 +126,7 @@ export const getServerSideProps = async () => {
     let skip = 0;
     let limit = 6;
     return listBlogsWithCategoriesAndTags(skip, limit).then((data) => {
+        console.log('DATA',data)
         if (data.error) {
             console.log(data.error);
         } else {
